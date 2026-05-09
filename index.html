@@ -348,41 +348,32 @@
     .q-card {
       background: var(--surface-alt);
       border-radius: var(--radius-sm);
-      padding: 11px 13px;
+      padding: 11px 13px 11px 14px;
       border: 1.5px solid var(--border-subtle);
+      border-left: 3px solid var(--border-subtle);
       cursor: pointer;
       transition: all var(--transition);
       position: relative;
-      overflow: hidden;
-    }
-    .q-card::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: transparent;
-      transition: background var(--transition);
+      overflow: visible;
     }
     .q-card:hover {
       border-color: var(--primary);
+      border-left-color: var(--primary);
       background: var(--surface-hover);
       box-shadow: 0 0 0 3px var(--primary-glow);
     }
-    .q-card:hover::before { background: var(--primary); }
     .q-card.active {
       border-color: var(--primary);
+      border-left-color: var(--primary);
       box-shadow: 0 0 0 3px var(--primary-glow);
       background: var(--primary-light);
     }
-    .q-card.active::before { background: var(--primary); }
-    .q-card.answered::before { background: var(--success); }
+    .q-card.answered {
+      border-left-color: var(--success);
+    }
     .q-card.bookmarked-card {
       border-color: rgba(210,153,34,0.4);
-    }
-    .q-card.bookmarked-card::before {
-      background: var(--warning);
+      border-left-color: var(--warning);
     }
 
     .q-header {
@@ -453,7 +444,10 @@
       gap: 4px;
       color: var(--text);
       position: relative;
-      overflow: hidden;
+      overflow: visible;
+      height: auto;
+      min-height: 36px;
+      word-break: break-word;
     }
     .opt::before {
       content: '';
@@ -3220,7 +3214,7 @@ for (let i = 0; i < 30; i++) {
               else if (sel && optIdx !== q.correct) cls += ' wrong';
             }
             const letter = String.fromCharCode(65 + optIdx);
-            optsHtml += `<div class="${cls}" data-opt="${optIdx}"><span>${letter}</span>${currentPart === 1 ? '' : ' <span style="font-size:0.72rem;font-weight:500;max-width:80px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">' + optText + '</span>'}</div>`;
+            optsHtml += `<div class="${cls}" data-opt="${optIdx}"><span>${letter}</span>${currentPart === 1 ? '' : ' <span style="font-size:0.72rem;font-weight:500;white-space:normal;word-break:break-word;">' + optText + '</span>'}</div>`;
           });
 
           const qNum = currentPart === 1 ? idx + 1 : idx + 8;
