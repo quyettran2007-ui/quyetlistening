@@ -6,69 +6,58 @@
   <title>LUYỆN THI LISTENING | TRẦN XUÂN QUYẾT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0d1117;
-      --bg2: #161b22;
-      --surface: #1c2128;
-      --surface-alt: #21262d;
-      --surface-hover: #2d333b;
-      --text: #e6edf3;
-      --text-muted: #7d8590;
-      --border: #30363d;
-      --border-subtle: #21262d;
-      --primary: #58a6ff;
-      --primary-glow: rgba(88,166,255,0.15);
-      --primary-hover: #79b8ff;
-      --primary-light: rgba(88,166,255,0.1);
-      --success: #3fb950;
-      --success-light: rgba(63,185,80,0.15);
-      --danger: #f85149;
-      --danger-light: rgba(248,81,73,0.15);
-      --warning: #d29922;
-      --warning-light: rgba(210,153,34,0.15);
-      --accent: #bc8cff;
-      --accent2: #ff7b72;
-      --radius: 12px;
-      --radius-sm: 8px;
-      --radius-xs: 5px;
-      --shadow: 0 8px 24px rgba(0,0,0,0.4);
-      --shadow-lg: 0 16px 48px rgba(0,0,0,0.6);
-      --transition: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
-      --font-mono: 'JetBrains Mono', monospace;
-      --highlight: rgba(255,214,0,0.25);
-      --highlight-strong: rgba(255,214,0,0.4);
-      --glow-blue: 0 0 20px rgba(88,166,255,0.3);
-      --glow-green: 0 0 20px rgba(63,185,80,0.3);
-    }
-    .light {
-      --bg: #f6f8fa;
-      --bg2: #ffffff;
+      --bg: #f0f4f8;
       --surface: #ffffff;
-      --surface-alt: #f6f8fa;
-      --surface-hover: #edf2f7;
-      --text: #24292f;
-      --text-muted: #57606a;
-      --border: #d0d7de;
-      --border-subtle: #e8ecef;
-      --primary: #0969da;
-      --primary-glow: rgba(9,105,218,0.1);
-      --primary-hover: #0550ae;
-      --primary-light: rgba(9,105,218,0.08);
-      --success: #1a7f37;
-      --success-light: rgba(26,127,55,0.1);
-      --danger: #d1242f;
-      --danger-light: rgba(209,36,47,0.1);
-      --accent: #8250df;
-      --shadow: 0 4px 16px rgba(0,0,0,0.08);
-      --shadow-lg: 0 12px 32px rgba(0,0,0,0.12);
-      --highlight: rgba(255,213,0,0.4);
+      --surface-alt: #f8fafc;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-light: #eef2ff;
+      --success: #10b981;
+      --success-light: #d1fae5;
+      --danger: #ef4444;
+      --danger-light: #fee2e2;
+      --warning: #f59e0b;
+      --warning-light: #fef3c7;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --radius-xs: 6px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow: 0 4px 16px rgba(0,0,0,0.06), 0 1px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.1), 0 2px 8px rgba(0,0,0,0.05);
+      --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-mono: 'JetBrains Mono', monospace;
+      --highlight: #fef08a;
+      --highlight-strong: #fde047;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
+    .dark {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-alt: #273449;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --border: #334155;
+      --primary: #818cf8;
+      --primary-hover: #6366f1;
+      --primary-light: #1e1b4b;
+      --success-light: #064e3b;
+      --danger-light: #7f1d1d;
+      --warning-light: #713f12;
+      --shadow: 0 4px 16px rgba(0,0,0,0.3);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.5);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
-      font-family: 'Sora', system-ui, sans-serif;
+      font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
       color: var(--text);
       height: 100vh;
@@ -76,125 +65,110 @@
       flex-direction: column;
       overflow: hidden;
       transition: background var(--transition), color var(--transition);
-      background-image: radial-gradient(ellipse at top left, rgba(88,166,255,0.04) 0%, transparent 50%),
-                        radial-gradient(ellipse at bottom right, rgba(188,140,255,0.04) 0%, transparent 50%);
     }
-
     /* ── TOP BAR ── */
     .topbar {
-      background: var(--bg2);
+      background: var(--surface);
       border-bottom: 1px solid var(--border);
-      padding: 0 16px;
+      padding: 8px 20px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      height: 52px;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
       z-index: 20;
-      flex-wrap: nowrap;
-      position: relative;
-    }
-    .topbar::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--primary), var(--accent), transparent);
-      opacity: 0.4;
+      flex-wrap: wrap;
+      transition: background var(--transition);
     }
     .logo {
       font-weight: 800;
-      font-size: 1.05rem;
-      letter-spacing: -0.3px;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, #6366f1, #a855f7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       white-space: nowrap;
-      flex-shrink: 0;
     }
-    .topbar-sep { flex: 1; }
+    .topbar-sep {
+      flex: 1;
+    }
     .topbar .badge {
-      padding: 4px 12px;
+      padding: 5px 14px;
       border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.72rem;
-      background: var(--primary-light);
-      color: var(--primary);
-      border: 1px solid rgba(88,166,255,0.25);
-      white-space: nowrap;
-      letter-spacing: 0.5px;
-    }
-    .topbar select {
-      padding: 5px 10px;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text);
       font-weight: 600;
       font-size: 0.8rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      white-space: nowrap;
+      transition: background var(--transition), color var(--transition);
+    }
+    .topbar select {
+      padding: 7px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.85rem;
       cursor: pointer;
       outline: none;
       transition: all var(--transition);
-      font-family: 'Sora', sans-serif;
     }
     .topbar select:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-glow);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
     }
     .btn-icon-sm {
-      width: 34px;
-      height: 34px;
-      border-radius: 8px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
       border: 1px solid var(--border);
       background: var(--surface);
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1rem;
+      font-size: 1.1rem;
       transition: all var(--transition);
       color: var(--text);
-      flex-shrink: 0;
     }
     .btn-icon-sm:hover {
       background: var(--primary-light);
       border-color: var(--primary);
-      transform: translateY(-1px);
     }
     .timer-display {
       font-family: var(--font-mono);
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--text);
-      background: var(--surface);
-      padding: 5px 12px;
-      border-radius: 8px;
+      background: var(--surface-alt);
+      padding: 6px 14px;
+      border-radius: 20px;
       border: 1px solid var(--border);
       white-space: nowrap;
       transition: all var(--transition);
     }
     .timer-display.warning {
-      color: var(--danger);
-      border-color: var(--danger);
-      box-shadow: 0 0 12px rgba(248,81,73,0.2);
-      animation: timerPulse 1s infinite;
+      color: #ef4444;
+      border-color: #ef4444;
+      animation: pulse 1s infinite;
     }
-    @keyframes timerPulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.6; }
+    @keyframes pulse {
+      0%,
+      100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
     }
-
     /* ── MAIN LAYOUT ── */
     .main-container {
       display: flex;
       flex: 1;
-      gap: 6px;
-      padding: 6px;
+      gap: 8px;
+      padding: 8px;
       overflow: hidden;
     }
-
     /* ── IMAGE PANEL ── */
     .image-panel {
       flex: 0 0 48%;
@@ -206,31 +180,32 @@
       flex-direction: column;
       overflow: hidden;
       transition: all var(--transition);
+      position: relative;
     }
     .image-panel .zoom-bar {
       display: flex;
-      gap: 5px;
-      padding: 7px 10px;
+      gap: 6px;
+      padding: 8px 12px;
       background: var(--surface-alt);
       border-bottom: 1px solid var(--border);
       align-items: center;
+      transition: background var(--transition);
     }
     .zoom-bar button {
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 5px 12px;
+      border-radius: 16px;
       border: 1px solid var(--border);
       background: var(--surface);
       cursor: pointer;
-      font-size: 0.72rem;
-      font-weight: 600;
+      font-size: 0.75rem;
+      font-weight: 500;
       color: var(--text);
       transition: all var(--transition);
-      font-family: 'Sora', sans-serif;
+      white-space: nowrap;
     }
     .zoom-bar button:hover {
       background: var(--primary-light);
       border-color: var(--primary);
-      color: var(--primary);
     }
     .zoom-bar .zoom-label {
       font-size: 0.7rem;
@@ -241,16 +216,16 @@
     .image-scroll {
       flex: 1;
       overflow-y: auto;
-      padding: 10px;
+      padding: 12px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       align-items: center;
     }
     .image-scroll img {
       max-width: 100%;
       border-radius: var(--radius-sm);
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-shadow: var(--shadow-sm);
       background: #fff;
       transition: transform 0.15s ease;
       transform-origin: top center;
@@ -264,7 +239,6 @@
       font-size: 1rem;
       font-weight: 500;
     }
-
     /* ── QUIZ PANEL ── */
     .quiz-panel {
       flex: 1 1 52%;
@@ -275,33 +249,21 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      transition: all var(--transition);
     }
     .quiz-header {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 8px 14px;
+      padding: 10px 16px;
       background: var(--surface-alt);
       border-bottom: 1px solid var(--border);
-    }
-    .quiz-header-title {
-      font-weight: 700;
-      font-size: 0.82rem;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .quiz-header-title::before {
-      content: '';
-      width: 3px;
-      height: 16px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      border-radius: 2px;
+      flex-wrap: wrap;
+      transition: background var(--transition);
     }
     .progress-mini {
       flex: 1;
-      height: 5px;
+      height: 6px;
       background: var(--border);
       border-radius: 3px;
       overflow: hidden;
@@ -309,131 +271,86 @@
     }
     .progress-mini-fill {
       height: 100%;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
+      background: linear-gradient(90deg, #6366f1, #a855f7);
       border-radius: 3px;
-      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
+      transition: width 0.3s ease;
     }
-    .progress-mini-fill::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-      animation: shimmer 2s infinite;
-    }
-    @keyframes shimmer {
-      to { left: 200%; }
-    }
-    .answered-count {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-      white-space: nowrap;
-    }
-
-    /* ── QUESTION LIST ── */
     .question-list {
       flex: 1;
       overflow-y: auto;
-      padding: 8px 10px;
+      padding: 8px 12px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
     .q-card {
       background: var(--surface-alt);
       border-radius: var(--radius-sm);
-      padding: 11px 13px 11px 14px;
-      border: 1.5px solid var(--border-subtle);
-      border-left: 3px solid var(--border-subtle);
+      padding: 12px 14px;
+      border: 2px solid transparent;
       cursor: pointer;
       transition: all var(--transition);
       position: relative;
-      overflow: visible;
     }
     .q-card:hover {
       border-color: var(--primary);
-      border-left-color: var(--primary);
-      background: var(--surface-hover);
-      box-shadow: 0 0 0 3px var(--primary-glow);
+      background: var(--primary-light);
     }
     .q-card.active {
       border-color: var(--primary);
-      border-left-color: var(--primary);
-      box-shadow: 0 0 0 3px var(--primary-glow);
+      box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
       background: var(--primary-light);
     }
     .q-card.answered {
-      border-left-color: var(--success);
+      border-left: 4px solid var(--success);
     }
-    .q-card.bookmarked-card {
-      border-color: rgba(210,153,34,0.4);
-      border-left-color: var(--warning);
-    }
-
-    .q-header {
+    .q-card .q-header {
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 7px;
+      margin-bottom: 8px;
     }
     .q-num {
-      background: linear-gradient(135deg, var(--primary), var(--accent));
+      background: var(--primary);
       color: #fff;
-      border-radius: 6px;
-      padding: 2px 9px;
-      font-size: 0.68rem;
-      font-weight: 800;
+      border-radius: 14px;
+      padding: 3px 10px;
+      font-size: 0.7rem;
+      font-weight: 700;
       white-space: nowrap;
-      letter-spacing: 0.3px;
-      flex-shrink: 0;
     }
     .q-text {
       font-weight: 600;
-      font-size: 0.84rem;
+      font-size: 0.9rem;
       color: var(--text);
-      line-height: 1.4;
-      flex: 1;
     }
     .q-bookmark {
       margin-left: auto;
       cursor: pointer;
-      font-size: 1rem;
-      opacity: 0.3;
+      font-size: 1.1rem;
+      opacity: 0.4;
       transition: all var(--transition);
       background: none;
       border: none;
       color: var(--text);
-      padding: 2px;
-      flex-shrink: 0;
-      border-radius: 4px;
     }
-    .q-bookmark:hover { opacity: 0.9; transform: scale(1.1); }
     .q-bookmark.bookmarked {
       opacity: 1;
-      color: var(--warning);
-      filter: drop-shadow(0 0 4px rgba(210,153,34,0.4));
+      color: #f59e0b;
     }
-
-    /* ── OPTIONS ── */
     .options-row {
       display: flex;
-      gap: 5px;
+      gap: 6px;
       flex-wrap: wrap;
     }
     .opt {
-      flex: 1 1 60px;
-      min-width: 55px;
-      padding: 8px 6px;
-      border-radius: 8px;
-      font-weight: 700;
+      flex: 1 1 70px;
+      min-width: 60px;
+      padding: 9px 8px;
+      border-radius: 24px;
+      font-weight: 600;
       font-size: 0.78rem;
-      border: 1.5px solid var(--border);
+      border: 2px solid var(--border);
       background: var(--surface);
       cursor: pointer;
       text-align: center;
@@ -441,84 +358,64 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 4px;
+      gap: 5px;
       color: var(--text);
-      position: relative;
-      overflow: visible;
-      height: auto;
-      min-height: 36px;
-      word-break: break-word;
-    }
-    .opt::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      transition: opacity var(--transition);
     }
     .opt:hover {
       border-color: var(--primary);
       background: var(--primary-light);
-      color: var(--primary);
-      transform: translateY(-1px);
-      box-shadow: var(--glow-blue);
     }
     .opt.selected {
       border-color: var(--primary);
-      background: var(--primary-light);
-      color: var(--primary);
-      box-shadow: 0 0 0 2px var(--primary-glow);
+      background: rgba(99,102,241,0.12);
+      box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
     }
     .opt.correct {
       border-color: var(--success) !important;
       background: var(--success-light) !important;
-      color: var(--success) !important;
-      box-shadow: var(--glow-green) !important;
     }
     .opt.wrong {
       border-color: var(--danger) !important;
       background: var(--danger-light) !important;
-      color: var(--danger) !important;
     }
-
     /* ── AUDIO BAR ── */
     .audio-bar {
-      background: var(--bg2);
+      background: var(--surface);
       border-top: 1px solid var(--border);
-      padding: 7px 12px;
+      padding: 8px 14px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
+      transition: background var(--transition);
     }
     .btn-play {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
+      background: var(--primary);
       color: #fff;
       border: none;
       cursor: pointer;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all var(--transition);
       flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(88,166,255,0.3);
     }
     .btn-play:hover {
-      transform: scale(1.08);
-      box-shadow: 0 6px 20px rgba(88,166,255,0.5);
+      background: var(--primary-hover);
+      transform: scale(1.05);
     }
     .btn-sm {
-      width: 30px;
-      height: 30px;
-      border-radius: 7px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
       border: 1px solid var(--border);
-      background: var(--surface);
+      background: var(--surface-alt);
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -528,464 +425,187 @@
     }
     .btn-sm:hover {
       background: var(--primary-light);
-      border-color: var(--primary);
-      color: var(--primary);
     }
-
-    /* ── SEEK BAR ── */
     .seek-bar {
-      flex: 1 1 80px;
+      flex: 1 1 100px;
       min-width: 60px;
       accent-color: var(--primary);
       cursor: pointer;
-      height: 4px;
-      border-radius: 2px;
-    }
-    input[type=range] {
-      -webkit-appearance: none;
-      height: 4px;
-      border-radius: 2px;
-      background: var(--border);
-      outline: none;
-      cursor: pointer;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--primary);
-      cursor: pointer;
-      box-shadow: 0 0 6px rgba(88,166,255,0.5);
     }
     .time-text {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
       white-space: nowrap;
     }
     .speed-select {
-      padding: 4px 7px;
-      border-radius: 6px;
+      padding: 5px 8px;
+      border-radius: 14px;
       border: 1px solid var(--border);
-      background: var(--surface);
-      font-weight: 600;
-      font-size: 0.72rem;
+      background: var(--surface-alt);
+      font-weight: 500;
+      font-size: 0.75rem;
       cursor: pointer;
       color: var(--text);
       outline: none;
-      font-family: 'Sora', sans-serif;
     }
     .volume-slider {
-      width: 60px;
+      width: 70px;
       accent-color: var(--primary);
       cursor: pointer;
     }
-
     /* ── ACTION ROW ── */
     .action-row {
-      padding: 7px 12px;
+      padding: 8px 14px;
       display: flex;
-      gap: 6px;
+      gap: 8px;
       align-items: center;
       flex-wrap: wrap;
       border-top: 1px solid var(--border);
       background: var(--surface-alt);
+      transition: background var(--transition);
     }
     .btn {
-      padding: 7px 15px;
-      border-radius: 8px;
+      padding: 8px 18px;
+      border-radius: 20px;
       border: 1px solid var(--border);
       background: var(--surface);
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       transition: all var(--transition);
       color: var(--text);
       white-space: nowrap;
-      font-family: 'Sora', sans-serif;
-      display: flex;
-      align-items: center;
-      gap: 5px;
     }
     .btn:hover {
-      background: var(--surface-hover);
+      background: var(--primary-light);
       border-color: var(--primary);
-      color: var(--primary);
-      transform: translateY(-1px);
     }
     .btn-primary {
-      background: linear-gradient(135deg, var(--primary), #1f6feb);
+      background: var(--primary);
       color: #fff;
       border: none;
-      box-shadow: 0 4px 12px rgba(88,166,255,0.25);
     }
     .btn-primary:hover {
-      background: linear-gradient(135deg, var(--primary-hover), #388bfd);
-      transform: translateY(-1px);
-      box-shadow: 0 6px 20px rgba(88,166,255,0.4);
-      color: #fff;
+      background: var(--primary-hover);
     }
     .btn-success {
-      background: linear-gradient(135deg, var(--success), #0d6028);
+      background: var(--success);
       color: #fff;
       border: none;
-      box-shadow: 0 4px 12px rgba(63,185,80,0.25);
-    }
-    .btn-success:hover {
-      transform: translateY(-1px);
-      color: #fff;
-    }
-    .btn-danger {
-      background: linear-gradient(135deg, var(--danger), #b91c1c);
-      color: #fff;
-      border: none;
-    }
-    .btn-danger:hover {
-      transform: translateY(-1px);
-      color: #fff;
     }
     .score-badge {
-      font-weight: 800;
-      font-size: 0.82rem;
+      font-weight: 700;
+      font-size: 0.9rem;
       padding: 6px 14px;
-      border-radius: 8px;
+      border-radius: 20px;
       background: var(--primary-light);
       color: var(--primary);
-      border: 1px solid rgba(88,166,255,0.25);
       white-space: nowrap;
-      font-family: var(--font-mono);
+      transition: all var(--transition);
     }
-
     /* ── SCRIPT PANEL ── */
     .script-panel {
       border-top: 1px solid var(--border);
-      background: var(--bg);
-      max-height: 160px;
+      background: var(--surface-alt);
+      max-height: 180px;
       overflow-y: auto;
-      padding: 10px 14px;
-      font-size: 0.78rem;
-      line-height: 1.7;
+      padding: 12px 16px;
+      font-size: 0.8rem;
+      line-height: 1.6;
       display: none;
       white-space: pre-wrap;
+      transition: all var(--transition);
     }
     .script-panel mark {
       background: var(--highlight);
       border-radius: 3px;
       padding: 1px 3px;
-      font-weight: 600;
-      color: var(--text);
+      font-weight: 500;
     }
-    .script-panel.show { display: block; }
-
-    /* ── MODAL ── */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.75);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-    }
-    .modal-overlay.show {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .modal {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      max-width: 420px;
-      width: 90%;
-      box-shadow: var(--shadow-lg);
-      transform: translateY(20px) scale(0.96);
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .modal-overlay.show .modal {
-      transform: translateY(0) scale(1);
-    }
-    .modal-icon {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 16px;
+    .script-panel.show {
       display: block;
     }
-    .modal-title {
-      font-size: 1.1rem;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 10px;
-      color: var(--text);
-    }
-    .modal-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      text-align: center;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-    .modal-actions {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-    }
-    .modal-actions .btn {
-      padding: 9px 22px;
-      font-size: 0.85rem;
-    }
-
-    /* ── HISTORY PANEL ── */
-    .history-panel {
-      position: fixed;
-      right: -360px;
-      top: 52px;
-      bottom: 0;
-      width: 340px;
-      background: var(--surface);
-      border-left: 1px solid var(--border);
-      box-shadow: -8px 0 32px rgba(0,0,0,0.4);
-      z-index: 100;
-      display: flex;
-      flex-direction: column;
-      transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .history-panel.open { right: 0; }
-    .history-header {
-      padding: 16px 16px 12px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--surface-alt);
-    }
-    .history-title {
-      font-weight: 800;
-      font-size: 0.9rem;
-      flex: 1;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .history-close {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      cursor: pointer;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      transition: all var(--transition);
-    }
-    .history-close:hover { background: var(--danger-light); color: var(--danger); border-color: var(--danger); }
-    .history-list {
-      flex: 1;
-      overflow-y: auto;
-      padding: 10px;
-    }
-    .history-empty {
-      padding: 40px 20px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    .history-item {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 12px 14px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      transition: all var(--transition);
+    /* ── TOOLTIP ── */
+    [data-tooltip] {
       position: relative;
     }
-    .history-item:hover { border-color: var(--primary); background: var(--primary-light); }
-    .history-item-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-    .history-item-test {
-      font-weight: 700;
-      font-size: 0.82rem;
-      color: var(--primary);
-    }
-    .history-item-score {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 5px;
-      background: var(--success-light);
-      color: var(--success);
-    }
-    .history-item-score.poor { background: var(--danger-light); color: var(--danger); }
-    .history-item-score.medium { background: var(--warning-light); color: var(--warning); }
-    .history-item-meta {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      display: flex;
-      gap: 8px;
-    }
-    .history-del {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-      width: 22px;
-      height: 22px;
-      border-radius: 5px;
-      border: none;
-      background: transparent;
-      color: var(--text-muted);
-      cursor: pointer;
-      font-size: 0.7rem;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      transition: all var(--transition);
-    }
-    .history-item:hover .history-del { display: flex; }
-    .history-del:hover { background: var(--danger-light); color: var(--danger); }
-    .history-footer {
-      padding: 10px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      gap: 8px;
-    }
-
-    /* ── BOOKMARK FILTER ── */
-    .filter-bar {
-      display: flex;
-      gap: 5px;
-      padding: 6px 10px;
-      background: var(--surface-alt);
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .filter-btn {
-      padding: 3px 10px;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      cursor: pointer;
-      font-size: 0.72rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      transition: all var(--transition);
-      font-family: 'Sora', sans-serif;
-    }
-    .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
-    .filter-btn.active {
-      background: var(--primary-light);
-      border-color: var(--primary);
-      color: var(--primary);
-    }
-    .filter-btn.active.warning-btn {
-      background: var(--warning-light);
-      border-color: var(--warning);
-      color: var(--warning);
-    }
-    .filter-count {
-      font-size: 0.65rem;
-      font-family: var(--font-mono);
-      color: var(--text-muted);
-      margin-left: auto;
-    }
-
-    /* ── TOOLTIP ── */
-    [data-tooltip] { position: relative; }
     [data-tooltip]:hover::after {
       content: attr(data-tooltip);
       position: absolute;
       bottom: 120%;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--text);
-      color: var(--bg);
+      background: #1e293b;
+      color: #fff;
       padding: 4px 10px;
-      border-radius: 5px;
-      font-size: 0.68rem;
+      border-radius: 6px;
+      font-size: 0.7rem;
       white-space: nowrap;
       z-index: 99;
       pointer-events: none;
     }
-
-    /* ── SCROLLBAR ── */
-    ::-webkit-scrollbar { width: 5px; height: 5px; }
-    ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 800px) {
-      .main-container { flex-direction: column; }
-      .image-panel, .quiz-panel { flex: auto; height: 50%; }
-      .image-panel { flex: 0 0 40%; }
-      .topbar .logo { font-size: 0.9rem; }
+      .main-container {
+        flex-direction: column;
+      }
+      .image-panel,
+      .quiz-panel {
+        flex: auto;
+        height: 50%;
+      }
+      .image-panel {
+        flex: 0 0 40%;
+      }
+      .topbar {
+        gap: 6px;
+        padding: 6px 10px;
+      }
+      .topbar .logo {
+        font-size: 1rem;
+      }
     }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
     }
-    .q-card { animation: fadeInUp 0.2s ease both; }
-    .q-card:nth-child(1) { animation-delay: 0ms; }
-    .q-card:nth-child(2) { animation-delay: 30ms; }
-    .q-card:nth-child(3) { animation-delay: 60ms; }
-    .q-card:nth-child(4) { animation-delay: 90ms; }
-    .q-card:nth-child(5) { animation-delay: 120ms; }
-    .q-card:nth-child(6) { animation-delay: 150ms; }
-    .q-card:nth-child(7) { animation-delay: 180ms; }
-
-    /* ── TOAST ── */
-    .toast-container {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    ::-webkit-scrollbar-track {
+      background: transparent;
     }
-    .toast {
-      padding: 10px 18px;
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
       border-radius: 10px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text);
-      box-shadow: var(--shadow);
-      animation: toastIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
-    .toast.success { border-color: var(--success); color: var(--success); background: var(--success-light); }
-    .toast.danger { border-color: var(--danger); color: var(--danger); background: var(--danger-light); }
-    @keyframes toastIn {
-      from { opacity: 0; transform: translateX(20px); }
-      to { opacity: 1; transform: translateX(0); }
+    .dark ::-webkit-scrollbar-thumb {
+      background: #475569;
     }
+	/* ── NOTE PANEL ── */
+	.note-panel {
+	  border-top: 1px solid var(--border);
+	  background: #fef9e7;       /* màu vàng nhạt để nổi bật */
+	  max-height: 180px;
+	  overflow-y: auto;
+	  padding: 12px 16px;
+	  font-size: 0.8rem;
+	  line-height: 1.6;
+	  display: none;
+	  white-space: pre-wrap;
+	  transition: all var(--transition);
+	}
+	.dark .note-panel {
+	  background: #2d2a1c;       /* tối hơn cho chế độ tối */
+	}
+	.note-panel.show {
+	  display: block;
+	}
   </style>
 </head>
 <body>
-  <!-- ═══ TOP BAR ═══ -->
-  <div class="topbar">
-    <span class="logo">🎧 LISTENING · TXQ</span>
+  <!-- ═══════════ TOP BAR ═══════════ -->
+  <div class="topbar" id="topbar">
+    <span class="logo">🎧 LISTENING · TRẦN XUÂN QUYẾT</span>
     <select id="partSelect" aria-label="Chọn Part">
       <option value="1">Part 1</option>
       <option value="2" selected>Part 2</option>
@@ -994,18 +614,17 @@
     <span class="badge" id="partBadge">Part 2</span>
     <span class="topbar-sep"></span>
     <span class="timer-display" id="timerDisplay">⏱ 20:00</span>
-    <button class="btn-icon-sm" id="historyBtn" data-tooltip="Lịch sử làm bài" aria-label="History">📊</button>
-    <button class="btn-icon-sm" id="darkToggle" data-tooltip="Chế độ sáng/tối" aria-label="Dark mode">🌓</button>
+    <button class="btn-icon-sm" id="darkToggle" data-tooltip="Chế độ tối/sáng" aria-label="Dark mode">🌓</button>
     <button class="btn-icon-sm" id="fullscreenBtn" data-tooltip="Toàn màn hình" aria-label="Fullscreen">⛶</button>
   </div>
 
-  <!-- ═══ MAIN CONTENT ═══ -->
+  <!-- ═══════════ MAIN CONTENT ═══════════ -->
   <div class="main-container">
     <!-- IMAGE PANEL -->
     <div class="image-panel" id="imagePanel">
       <div class="zoom-bar">
-        <button id="zoomInBtn">🔍+</button>
-        <button id="zoomOutBtn">🔍−</button>
+        <button id="zoomInBtn">🔍➕</button>
+        <button id="zoomOutBtn">🔍➖</button>
         <button id="zoomResetBtn">↺ 100%</button>
         <span class="zoom-label" id="zoomLabel">100%</span>
       </div>
@@ -1015,26 +634,19 @@
     <!-- QUIZ PANEL -->
     <div class="quiz-panel" id="quizPanel">
       <div class="quiz-header">
-        <span class="quiz-header-title">Câu hỏi</span>
+        <span style="font-weight:700;font-size:0.85rem;">📝 Câu hỏi</span>
         <div class="progress-mini">
           <div class="progress-mini-fill" id="progressFill" style="width:0%;"></div>
         </div>
-        <span class="answered-count" id="answeredCount">0/6</span>
-      </div>
-      <!-- FILTER BAR -->
-      <div class="filter-bar">
-        <button class="filter-btn active" id="filterAll">Tất cả</button>
-        <button class="filter-btn" id="filterUnanswered">⭕ Chưa trả lời</button>
-        <button class="filter-btn warning-btn" id="filterBookmarked">⭐ Đã đánh dấu</button>
-        <span class="filter-count" id="filterCount"></span>
+        <span style="font-size:0.75rem;color:var(--text-muted);" id="answeredCount">0/6</span>
       </div>
       <div class="question-list" id="questionList"></div>
       <!-- AUDIO BAR -->
-      <div class="audio-bar">
+      <div class="audio-bar" id="audioBar">
         <button class="btn-play" id="playPauseBtn" aria-label="Play/Pause">▶️</button>
-        <button class="btn-sm" id="rewindBtn" data-tooltip="Tua lùi 5s">⏪</button>
+        <button class="btn-sm" id="rewindBtn" data-tooltip="Tua lùi 5s" aria-label="Rewind 5s">⏪</button>
         <input type="range" class="seek-bar" id="seekSlider" value="0" min="0" max="100" step="0.1" aria-label="Seek">
-        <button class="btn-sm" id="forwardBtn" data-tooltip="Tua tới 5s">⏩</button>
+        <button class="btn-sm" id="forwardBtn" data-tooltip="Tua tới 5s" aria-label="Forward 5s">⏩</button>
         <span class="time-text" id="timeDisplay">00:00 / 00:00</span>
         <select class="speed-select" id="speedSelect" aria-label="Tốc độ">
           <option value="0.5">0.5x</option>
@@ -1044,10 +656,14 @@
           <option value="1.5">1.5x</option>
         </select>
         <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="0.8" aria-label="Âm lượng">
-        <button class="btn-sm" id="loopBtn" data-tooltip="Lặp đoạn">🔁</button>
-        <button class="btn-sm" id="scriptToggleBtn" data-tooltip="Transcript">📄</button>
+        <button class="btn-sm" id="loopBtn" data-tooltip="Lặp đoạn" aria-label="Loop">🔁</button>
+        <button class="btn-sm" id="scriptToggleBtn" data-tooltip="Hiện/ẩn transcript" aria-label="Script">📄</button>
+		<button class="btn-sm" id="noteToggleBtn" data-tooltip="Tóm tắt bài" aria-label="Note">📝</button>
       </div>
+      <!-- SCRIPT BOX -->
       <div class="script-panel" id="scriptPanel"></div>
+	  <div class="note-panel" id="notePanel"></div>
+      <!-- ACTION ROW -->
       <div class="action-row">
         <button class="btn" id="resetBtn">🔄 Làm lại</button>
         <button class="btn btn-primary" id="submitBtn">✅ Nộp bài</button>
@@ -1058,44 +674,44 @@
     </div>
   </div>
 
-  <!-- ═══ HISTORY PANEL ═══ -->
-  <div class="history-panel" id="historyPanel">
-    <div class="history-header">
-      <span class="history-title">📊 Lịch sử làm bài</span>
-      <button class="history-close" id="historyClose">✕</button>
-    </div>
-    <div class="history-list" id="historyList"></div>
-    <div class="history-footer">
-      <button class="btn btn-danger" id="clearAllHistory" style="flex:1;">🗑️ Xóa tất cả lịch sử</button>
-    </div>
-  </div>
-
-  <!-- ═══ MODAL ═══ -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal">
-      <span class="modal-icon" id="modalIcon">⚠️</span>
-      <div class="modal-title" id="modalTitle">Xác nhận</div>
-      <div class="modal-desc" id="modalDesc">Bạn có chắc chắn?</div>
-      <div class="modal-actions">
-        <button class="btn" id="modalCancel">Hủy</button>
-        <button class="btn btn-danger" id="modalConfirm">Xác nhận</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══ TOAST ═══ -->
-  <div class="toast-container" id="toastContainer"></div>
-
   <script>
     (function() {
+      // ───────── DỮ LIỆU MẪU ─────────
       const part1Tests = [];
       const part2Tests = [];
-
+	  const part2Notes = {
+		  1: "Cuộc thi trên radio – Giải thưởng là đĩa CD nhạc cổ điển.\nNhạc sĩ gốc Ý, sống chủ yếu ở Tây Ban Nha.\nCó một vở kịch cùng tên.\nKhi mới ra mắt, khán giả bỏ về.\nNhạc được dùng trong quảng cáo.\nSố điện thoại: 0018 937 224.",
+		  2: "Lễ hội nghệ thuật – Diễn ra 12–28/5.\nNgày 19/5 ở Theatre Royal có vở opera Faust.\nỞ Corn Exchange bán rượu và sandwich trong giờ nhạc jazz trưa.\nNhà thờ có biểu diễn âm nhạc.\nIckworth: đi bộ có hướng dẫn và hòa nhạc piano.\nĐặt vé qua bưu điện không dùng thẻ tín dụng.",
+		  3: "Trại hè quốc tế – Yêu cầu nói được một ngoại ngữ.\nỞ lều chung với người nhiều quốc tịch.\nCần người hòa đồng.\nPhải mang ảnh/bưu thiếp về văn hóa.\nMọi người đều tham gia biểu diễn (hát, múa, nhạc cụ).\nPhải trả toàn bộ phí trước khi trại bắt đầu.",
+		  4: "Lịch sử thời trang – Thời trang hiện đại thu hút hầu hết mọi người.\nTrước thế kỷ 20, quần áo may riêng.\nCoco Chanel thay đổi quan niệm thời trang.\nThập niên 1920, quần áo rẻ hơn nhờ sản xuất hàng loạt.\nNew Look của Dior: váy dài hơn.\nGiới thiệu triển lãm Trang phục Tương lai.",
+		  5: "Lịch TV thứ Bảy – Phim The Railway Princess 9:00–10:30.\nChương trình ca nhạc cho thanh thiếu niên vào giờ ăn trưa (12:00).\nBóng đá: Brazil gặp Ireland.\nTrời mưa sẽ hủy tennis.\nChương trình đố vui đoán năm.\nI Could Live Forever là phim ca nhạc.",
+		  6: "Trung tâm mua sắm Waterside – Mở cửa được 3 tuần.\nNên đi bằng ô tô.\nThứ Sáu mở cửa 10:00–9:00.\nTầng 3 có rạp chiếu phim 7 màn hình.\nCó hồ để chèo thuyền.\nPhàn nàn vì thiếu thùng rác công cộng.",
+		  7: "Sự kiện Carlisle cuối tuần – Hòa nhạc bắt đầu lúc 7:30, tiền mua thiết bị thể thao cho trường.\nCâu lạc bộ đi bộ gặp ở bãi đỗ xe cạnh hồ.\nBuổi nói chuyện của tác giả Sarah Jones ở thư viện (không cần là hội viên), kể về chuyến đi Châu Phi; cần đặt vé trước.",
+		  8: "Chuyến đi đến Trung tâm Nghệ thuật Jubilee – Còn vé xem phim Spider and Rose.\nXe khởi hành lúc 3:30 để có thời gian tham quan.\nMất phí xem triển lãm ballet Nga.\nCó thể mua quần áo ở trung tâm mua sắm gần đó.\nQuán Charlie's có đồ ăn nhẹ và đồ uống nóng.\nXe đón lúc 10:20 tối.",
+		  9: "Angela Morgan – Bay vòng quanh thế giới bằng trực thăng để quyên 500.000 bảng cho trẻ em bệnh.\nỞ tuổi 57, bà thích sống năng động.\nGiáo viên dạy bay trở thành bạn thân.\nÍt tham quan do chỉ dừng lấy nước và cắm trại.\nThích nhất ngắm cảnh đổi thay.\nĐiều nhớ nhất khi vắng nhà là tập thể dục thường xuyên.",
+		  10: "Họa sĩ Sarah – Vẽ 3 ngày cuối tuần (T6–CN).\nTiền bán tranh đủ mua vật liệu và học vẽ.\nHồi tiểu học vẽ bằng bút chì.\nThấy hữu ích nhất trong kỳ nghỉ vẽ là trao đổi với họa sĩ khác.\nĐã vẽ người dân ở Hy Lạp.\nSau video, khán giả được nghỉ uống cà phê.",
+		  11: "Giới thiệu sách – My life cần đọc sách khác của tác giả mới hiểu.\nGoodbye to the fields: cậu bé rời quê vì việc của bố.\nA-Z of Photography không cho người có kinh nghiệm.\nCooking for one khiến người dẫn thích nấu ăn.\nHolidays in Europe bản đồ nhỏ vô dụng.\nTuần sau: chọn sách làm quà.",
+		  12: "Nhà làm phim John – Chương trình gần nhất về Thái Bình Dương (dài 50.000 dặm).\nNgừng đi xa vì quá mệt.\nSắp tới có thể làm về tàn tích cổ ở xứ Wales.\nMuốn mọi người dũng cảm du lịch hơn.\nỞ nhà nhiều hơn phòng khi gia đình cần (vợ từng mổ khẩn cấp).\nĐã viết vài cuốn sách du lịch.",
+		  13: "Britta ở Berlin – Sống ở Berlin 4 năm.\nThích thành phố lớn náo nhiệt, không thích tiếng ồn giao thông.\nKhu cô ở có nhiều quán ăn rẻ, vui.\nThường đạp xe.\nCuối tuần hay đưa cháu trai đến triển lãm nghệ thuật.\nBạn bè hầu hết cùng phố.",
+		  14: "Thợ lặn Frank – Con tàu đầu tiên tìm thấy rất dễ vì không bị cát đá che phủ.\nCó thiết bị hiện đại nên thường đến trước thợ lặn chuyên nghiệp.\nTàu Seabird chìm trong gió bão.\nNhẫn cưới làm từ vàng tự tìm thấy.\nVợ muốn bán bớt đồ sưu tầm.\nHọc lặn bằng cách tham gia câu lạc bộ.",
+		  15: "Rachel và show múa rối – Trước đây là họa sĩ.\nChồng nảy ra ý tưởng diễn show sinh nhật đầu tiên.\nHàng xóm Lena giúp biểu diễn.\nMột lần trẻ con sợ con sư tử và khóc.\nCác con gái góp ý cho vở diễn mới.\nShow thành công nhờ chính cô yêu thích nó.",
+		  16: "Nhà sinh vật học Paul Hart – Chọn khu rừng vì sắp có đường xây, mất cơ hội.\nĐi chậm do phải phát quang rừng rậm.\nLo lắng về trách nhiệm với đội.\nThiếu ăn vì vài người ăn nhiều hơn phần.\nMột ngư dân cứu đồng đội bị ốm.\nTrở về thấy chuyến đi là trải nghiệm quý, chưa muốn đi tiếp.",
+		  17: "Phóng viên Angela Bond – Đang làm việc tại Anh.\nThích nhất chứng kiến tin tức lớn diễn ra.\nTừ Hồng Kông mang về bàn ghế.\nNgày bắt đầu lúc 8:30 sáng.\nGặp bạn trai qua chị gái giới thiệu.\nThư giãn bằng cách chèo thuyền.",
+		  18: "Jack Williams về quê Swanton – Thị trấn nằm trên bờ biển.\nThích nhất leo núi gần đó.\nCó trung tâm nghệ thuật mới xây.\nLo ô nhiễm làm biến mất chim trong rừng.\nThị trấn nay sầm uất, không thể buồn chán.\nTương lai tốt nhờ trung tâm mua sắm mới.",
+		  19: "Diễn viên ballet Elena Karpov – Bắt đầu ballet lúc 9 tuổi.\nỞ New York học tính tự lập.\nVai Lọ Lem sắp tới sẽ được trẻ em yêu thích.\nThích thử đồ thời trang.\nTặng hoa cho người hâm mộ.\nThích nhất công việc vì được làm điều mình yêu.",
+		  20: "Dự báo viên thời tiết Sarah Brown – Làm nghề 7 năm, thỉnh thoảng làm ca đêm.\nChuẩn bị dữ liệu trước khi đọc.\nChồng là phi công đường dài.\nTự hào đã chạy London Marathon.\nỞ Ấn Độ, một ông lão mời cô chụp ảnh cùng gia đình.",
+		  21: "Robin Marshall ở Argentina – Là nhân viên bán hàng lưu động.\nThời tiết hoàn hảo cho tham quan.\nMua một bức tranh ở chợ.\nXem múa và muốn nhảy cùng.\nỞ làng nhỏ, được chủ khách sạn chở thuyền trên sông.\nNơi yêu thích: ngọn núi vắng vẻ, hoàn toàn yên tĩnh.",
+		  22: "Harry Park – Công ty du lịch mạo hiểm – Mê phiêu lưu nhờ cha kể chuyện.\nLập công ty để chia sẻ trải nghiệm.\nTên Far and Wide do khách hàng gợi ý.\nLuôn cố gắng bảo vệ môi trường.\nKhông sợ nguy hiểm.\nNơi yêu thích nhất là một lâu đài cổ kỳ diệu ở Ấn Độ.",
+		  23: "Linda – tiệm bánh ngọt – Đi làm thêm vì cha mẹ không đủ tiền tiêu vặt.\nÔng chủ tốt bụng, không bao giờ quát.\nThích mùi bánh nướng.\nHọc được cách làm sandwich.\nNhân viên toàn thời gian tính nhẩm kém.\nThích nhất giờ ăn trưa vì bận rộn.",
+		  24: "Tim Jones – Khóa nhạc mùa hè – Thích nhất nghe học viên chơi nhạc cuối khóa.\nĐăng ký qua internet, không cần trình độ cao.\nGiáo viên tham gia vì yêu trẻ, lương thấp.\nĐịa điểm cần giao thông tốt.\nNhạc cụ phải để trong phòng khóa.\nLên kế hoạch tour diễn từ nhiều tháng trước.",
+		  25: "Marta Stanton – Nhà hàng di động – Chán công việc cũ vì ông chủ không lắng nghe.\nQuảng cáo qua mạng xã hội.\nƯu điểm: không cần bồi bàn vì tối đa 10 khách.\nĐi biển suýt hỏng vì gió thổi cát.\nTránh phục vụ tại nhà vì chật.\nLo các nhà hàng kém chất lượng làm xấu danh tiếng.",
+		  26: "Kỹ sư Toby Merchant – Làm ở Atkins 3 năm.\nĐang thiết kế sân bay mới.\nBất ngờ vì hay phải thảo luận với kiến trúc sư.\nGiới trẻ chê nghề kỹ sư nhàm chán.\nNhược điểm: không chủ động sắp xếp thời gian rảnh.\nHồi nhỏ muốn làm bác sĩ."
+		};
      const realPart1Data = [
   {
     id: 1,
     pages: ["images/part1_test1_page1.jpg", "images/part1_test1_page2.jpg", "images/part1_test1_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test1_xgbzrv.mp3",
+    audioUrl: "audio/part1_test1.mp3",
     questions: [
       { text: "Where will the girls meet?", options: ["A", "B", "C"], correct: 2, script: "Girl 1: Will you meet me in the park? Girl 2: OK. Where? By the entrance? Girl 1: No, at the ice-cream kiosk." },
       { text: "Which chair does the man want?", options: ["A", "B", "C"], correct: 0, script: "Man: Can you show me your office chairs? I'm looking for something with a high back and arms." },
@@ -1110,7 +726,7 @@
   {
   id: 2,
   pages: ["images/part1_test2_page1.jpg", "images/part1_test2_page2.jpg", "images/part1_test2_page3.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test2_enovws.mp3",
+  audioUrl: "audio/part1_test2.mp3",
   questions: [
     {
       text: "When and where are they meeting?",
@@ -1159,7 +775,7 @@
   {
     id: 3,
     pages: ["images/part1_test3_page1.jpg", "images/part1_test3_page2.jpg", "images/part1_test3_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test3_lmi8zi.mp3",
+    audioUrl: "audio/part1_test3.mp3",
     questions: [
       { text: "Where is the station?", options: ["A", "B", "C"], correct: 1, script: "Woman: Excuse me, can you tell us the way to the station?\nMan: Take the second on the right and it's at the end of that road." },
       { text: "Where did the woman put the calculator?", options: ["A", "B", "C"], correct: 2, script: "Man: Have you used my calculator?\nWoman: Yes, can't you find it? I put it back on the desk.\nMan: Where?\nWoman: Next to the lamp, I think. No, wait a minute, it's on that pile of books." },
@@ -1173,7 +789,7 @@
   {
     id: 4,
     pages: ["images/part1_test4_page1.jpg", "images/part1_test4_page2.jpg", "images/part1_test4_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test4_saesvz.mp3",
+    audioUrl: "audio/part1_test4.mp3",
     questions: [
       { text: "Where are the woman's glasses?", options: ["A", "B", "C"], correct: 0, script: "Woman: I can never find my glasses!\nMan: Where did you have them last?\nWoman: I either had them when I was working, or I left them in the lounge when I was watching television.\nMan: They're not in either of those places, you know - you're wearing them!" },
       { text: "What damage was done to the car?", options: ["A", "B", "C"], correct: 2, script: "Woman: I'm really annoyed. Someone's damaged my car again.\nMan: Don't tell me someone's scratched the paint again!\nWoman: No, not scratches this time. Someone's put paint all over the side." },
@@ -1187,7 +803,7 @@
     {
     id: 5,
     pages: ["images/part1_test5_page1.jpg", "images/part1_test5_page2.jpg", "images/part1_test5_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test5_jif4eo.mp3",
+    audioUrl: "audio/part1_test5.mp3",
     questions: [
       { text: "What was in the woman's bag?", options: ["A", "B", "C"], correct: 1, script: "Man: Was there anything valuable in the bag that was stolen, Madam?\nWoman: Yes. It had my purse in it and my keys.\nMan: Anything else?\nWoman: Well, luckily I was wearing my glasses, so no, nothing else." },
       { text: "Which film is the man talking about?", options: ["A", "B", "C"], correct: 1, script: "Man: I'm sure I've seen this film before. That bit where she's standing on the bridge watching the sunset reminded me." },
@@ -1201,7 +817,7 @@
     {
     id: 6,
     pages: ["images/part1_test6_page1.jpg", "images/part1_test6_page2.jpg", "images/part1_test6_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test6_dlbkt7.mp3",
+    audioUrl: "audio/part1_test6.mp3",
     questions: [
       { text: "How did the film end?", options: ["A", "B", "C"], correct: 1, script: "Man: ... and in this film a young man and his girlfriend try to rob a bank so they can afford to get married and go round the world together. But he gets caught outside the bank, and their dream never comes true." },
       { text: "What time does the train to Rome leave?", options: ["A", "B", "C"], correct: 2, script: "Man: Excuse me - what time does this train leave?\nWoman: This train leaves for Paris at five to three.\nMan: Paris? Isn't it the Rome train?\nWoman: No - that goes at twenty five past three from platform four." },
@@ -1215,7 +831,7 @@
     {
     id: 7,
     pages: ["images/part1_test7_page1.jpg", "images/part1_test7_page2.jpg", "images/part1_test7_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test7_dunjng.mp3",
+    audioUrl: "audio/part1_test7.mp3",
     questions: [
       { text: "How did the woman get to work today?", options: ["A", "B", "C"], correct: 1, script: "Woman: Oh, I'm so sorry I'm late - I missed the bus. I was trying to decide whether to walk or go back and get my bike when I saw my neighbour. Luckily he offered me a lift, because he works near here." },
       { text: "Where does the pollution come from?", options: ["A", "B", "C"], correct: 2, script: "Woman: The stream is really dirty by the time it reaches the valley but we've discovered where the pollution comes from. We already knew that the water was pure in the mountains at the top so we realised the pollution must come from somewhere in the forest. There is a village above the forest but we tested the water there and it was fine." },
@@ -1229,7 +845,7 @@
     {
     id: 8,
     pages: ["images/part1_test8_page1.jpg", "images/part1_test8_page2.jpg", "images/part1_test8_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test8_rfkw2h.mp3",
+    audioUrl: "audio/part1_test8.mp3",
     questions: [
       { text: "What time will the flight leave?", options: ["A", "B", "C"], correct: 2, script: "Woman: This is an announcement for all passengers on the 10.35 flight to Rome, flight number BA 934. We regret that due to engine problems there will be a one hour delay; the new departure time will be 11.35. Please wait in the departure lounge until you are called." },
       { text: "Which is the photo of the girl's father?", options: ["A", "B", "C"], correct: 1, script: "Woman: Have I shown you this amazing old photo of my father I found the other day?\nMan: Let's see. Wow! Is that really him?\nWoman: Yes it is! He had a lot of hair in those days, didn't he, and he didn't wear glasses like he does now." },
@@ -1243,7 +859,7 @@
     {
     id: 9,
     pages: ["images/part1_test9_page1.jpg", "images/part1_test9_page2.jpg", "images/part1_test9_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test9_auq1g9.mp3",
+    audioUrl: "audio/part1_test9.mp3",
     questions: [
       { text: "Which activity will the family do this year?", options: ["A", "B", "C"], correct: 1, script: "Woman: We're going to try an activity holiday this year, but we all want to do something different. The children want to go cycling but their father wants to go on a water sports holiday, you know, sailing and windsurfing, things like that. And I'd like to go walking. We all want to go together so we've decided to let the children choose this year, and we'll choose next year." },
       { text: "Which is the woman's house?", options: ["A", "B", "C"], correct: 0, script: "Man: How will I recognise your house when I call for you, Sue?\nWoman: Well, it's the same as all the others in the street, but look out for a big tree. It's by the front gate and it's covered in lovely white flowers at the moment." },
@@ -1257,7 +873,7 @@
     {
     id: 10,
     pages: ["images/part1_test10_page1.jpg", "images/part1_test10_page2.jpg", "images/part1_test10_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test10_ssr4pp.mp3",
+    audioUrl: "audio/part1_test10.mp3",
     questions: [
       { text: "How much is the man's ticket?", options: ["A", "B", "C"], correct: 1, script: "Man: Can you tell me how much a ticket is for Saturday's performance of Macbeth?\nWoman: The front stalls and the circle are the most expensive at 16.50. The middle seats in the stalls cost 15 and the back three rows cost 12.50, but the view isn't so good. All seats are 10 for students.\nMan: I'll have one in the middle please. I'm not a student. I've got my credit card here." },
       { text: "What will they have for lunch?", options: ["A", "B", "C"], correct: 1, script: "Man: It's chips for lunch. What would you like with them?\nWoman: Not fish again, please, and we had chicken last night.\nMan: Well, we've got plenty of sausages, but we've finished the eggs, I'm afraid.\nWoman: That's decided then." },
@@ -1271,7 +887,7 @@
     {
     id: 11,
     pages: ["images/part1_test11_page1.jpg", "images/part1_test11_page2.jpg", "images/part1_test11_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test11_w0mgxu.mp3",
+    audioUrl: "audio/part1_test11.mp3",
     questions: [
       { text: "What is the man going to buy?", options: ["A", "B", "C"], correct: 1, script: "Woman: Is everything ready for the holiday?\nMan: I'm just going shopping - I must get those pills I take when I feel travel sick. Do we need anything else at the chemist's? We forgot the toothpaste last time!\nWoman: I've got that. I haven't got any sunglasses, but I can borrow yours, can't I? And I'll get something to read at the airport.\nMan: Right." },
       { text: "Which dress is Kate talking about?", options: ["A", "B", "C"], correct: 2, script: "Girl: Oh Mum, this dress is still dirty!\nWoman: It can't be, Kate - I've only just washed it.\nGirl: Well it is. The mark on the collar has gone, but there's still a small one here - look it's at the front just below the button. It's where I spilt some Coke last week." },
@@ -1285,7 +901,7 @@
     {
     id: 12,
     pages: ["images/part1_test12_page1.jpg", "images/part1_test12_page2.jpg", "images/part1_test12_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test12_gggkbh.mp3",
+    audioUrl: "audio/part1_test12.mp3",
     questions: [
       { text: "Where will the woman go first after work?", options: ["A", "B", "C"], correct: 1, script: "Man: Are you and Sarah going straight to the restaurant from work tonight?\nWoman: Actually, I'm leaving work early because I need to do some shopping in the market, and I'm going to meet Sarah after that outside the cinema. She doesn't know where the restaurant is, you see. You're playing tennis after work, aren't you?\nMan: Yes. So I'll see you at the restaurant." },
       { text: "What can festival visitors see every day?", options: ["A", "B", "C"], correct: 1, script: "Woman: The Arts Centre in London is holding a festival of Irish culture from the 4th to 12th of April. An exhibition of paintings is open daily and on some weekday evenings the Theatre has special events including plays and films. At the weekend, concerts of Irish music will take place in the Town Hall." },
@@ -1299,7 +915,7 @@
     {
     id: 13,
     pages: ["images/part1_test13_page1.jpg", "images/part1_test13_page2.jpg", "images/part1_test13_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test13_x7jsei.mp3",
+    audioUrl: "audio/part1_test13.mp3",
     questions: [
       { text: "", options: ["A", "B", "C"], correct: 1, script: "" },  // 1B
       { text: "", options: ["A", "B", "C"], correct: 1, script: "" },  // 2B
@@ -1313,7 +929,7 @@
     {
     id: 14,
     pages: ["images/part1_test14_page1.jpg", "images/part1_test14_page2.jpg", "images/part1_test14_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test14_lce8yh.mp3",
+    audioUrl: "audio/part1_test14.mp3",
     questions: [
       { text: "Which sport will the woman learn on holiday?", options: ["A", "B", "C"], correct: 2, script: "Man: ... So if you're interested in water sports, this hotel has two pools, diving boards, and its own private beach. You can learn to water ski there, and guests can windsurf too - although the hotel advises beginners to take a few lessons before going out on their own.\nWoman: Good. I'm quite a strong swimmer, and I have always wanted to try windsurfing, so that would suit me fine. I tried water skiing once, but I didn't like it.\nMan: Well, I'm sure you'll enjoy your stay there then.\nWoman: Good." },
       { text: "What does the girl's penfriend look like now?", options: ["A", "B", "C"], correct: 1, script: "Woman: Look at these photos of my penfriend and her family. I took them during the trip.\nMan: So is she the one with long hair?\nWoman: Oh, that's her sister. This is her, next to me. She looks a lot like her sister, though, doesn't she? And they used to have hair the same length, but hers has always been curly. It's a shame she had it cut, though - I think it looked better when it was long." },
@@ -1327,7 +943,7 @@
     {
     id: 15,
     pages: ["images/part1_test15_page1.jpg", "images/part1_test15_page2.jpg", "images/part1_test15_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test15_nlkkeo.mp3",
+    audioUrl: "audio/part1_test15.mp3",
     questions: [
       { text: "What is the weather forecast for tomorrow?", options: ["A", "B", "C"], correct: 2, script: "Man: And now for the weather. As we go through today, the temperature will slowly rise, and the snow we've had for the last few days will disappear by the end of the afternoon. Tomorrow we can expect some rain, but by the end of the week, some sunny weather is likely." },
       { text: "What will they buy at the supermarket?", options: ["A", "B", "C"], correct: 0, script: "Woman: Look, Kate, there are some of those biscuits you like!\nGirl: Oh, yes. Mmm ... they're a bit expensive, though, Mum. Why don't we have this cake instead? Remember we've got guests coming tomorrow.\nWoman: Oh, I haven't forgotten. I've already made a cake, and I've bought lots of ice cream for the children.\nGirl: Well, I suppose the biscuits would be nice with ice cream. Let's see ... oh, good. I've got enough money in my purse." },
@@ -1341,7 +957,7 @@
     {
     id: 16,
     pages: ["images/part1_test16_page1.jpg", "images/part1_test16_page2.jpg", "images/part1_test16_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test16_xatzq1.mp3",
+    audioUrl: "audio/part1_test16.mp3",
     questions: [
       { text: "Which of Miranda's things will Lucy be able to use?", options: ["A", "B", "C"], correct: 1, script: "Woman: Lucy's joining the tennis club, so that'll be more equipment I have to buy.\nMan: Oh well, don't waste too much money. We bought Miranda everything, but then she only went once because she didn't like the teacher. Actually, I think we've still got some of it somewhere. There's a box of balls in the cupboard certainly, but she gave her cousin the racket, and she wears the shoes for other things. But I could look in the cupboard and give you what's there.\nWoman: Oh thanks, that'd be great. That would be really helpful." },
       { text: "What can't the woman find?", options: ["A", "B", "C"], correct: 2, script: "Woman: I'm going to mend and paint the shelves in your bedroom today.\nMan: Great, Mum. Anything I can do to help?\nWoman: Yes, can you go to the shop and get me a new paint brush - this one's too old. But before you do that, ask your father what he's done with the hammer - I've looked everywhere for it. There was nothing in the toolbox except this pair of scissors which I lost months ago!" },
@@ -1355,7 +971,7 @@
     {
     id: 17,
     pages: ["images/part1_test17_page1.jpg", "images/part1_test17_page2.jpg", "images/part1_test17_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test17_uoeffp.mp3",
+    audioUrl: "audio/part1_test17.mp3",
     questions: [
       { text: "Where will they meet?", options: ["A", "B", "C"], correct: 1, script: "Girl: Hi, it's Maria. Got your message. Yeah, I'd like to go to the movies. There's a film called Lightworld Two, or a comedy - I don't mind which ... Shall we meet outside the cinema?\nBoy: Or, I know, at the coffee bar on the corner, we could have a snack before we go in. We could meet at the bus stop.\nGirl: Mum's driving me into town this afternoon, to buy some trainers, so I won't have to get the bus. But something to eat first is a good idea. Shall we say six o'clock?\nBoy: OK." },
       { text: "What has the girl forgotten to bring?", options: ["A", "B", "C"], correct: 2, script: "Boy: Drink up your coffee - we'll be late for class. What are you looking for now? Don't tell me you've left your essay at home. You said you were working on it till midnight.\nGirl: Don't worry, it was the first thing I put in my bag - look, here it is. I won't be a second ... just checking everything. Pen ... now where did I...? Oh dear, you'll be able to lend me one, won't you? Keys? - oh, here they are, in my pocket as usual." },
@@ -1369,7 +985,7 @@
     {
     id: 18,
     pages: ["images/part1_test18_page1.jpg", "images/part1_test18_page2.jpg", "images/part1_test18_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test18_c0wpv9.mp3",
+    audioUrl: "audio/part1_test18.mp3",
     questions: [
       { text: "Where are the dictionaries?", options: ["A", "B", "C"], correct: 0, script: "Man: As this is your first visit to the library, I'll show you round. As you can see, shelves are clearly labelled according to subject. Most books you may take home with you but some, such as foreign language dictionaries, must stay in the library. These can be found over there behind the computers and it's best if you take them to the desks by the window and study them there. Or you can use these armchairs if you prefer to sit somewhere more comfortable." },
       { text: "Which evening dress does the woman decide to wear?", options: ["A", "B", "C"], correct: 1, script: "Man: Why are you taking so long to decide what to wear tomorrow night? The black dress with the long sleeves will be fine!\nWoman: Mmm ... Long sleeves are a bit uncomfortable, but yes, it's a nice dress. Trouble is, I've lent my short-sleeved dress to Angela. That would be perfect, it's a long dress with a wide belt... Anyway, let's see what I've got here ... this one, also black, short-sleeved - but it's got white flowers on the sleeves.\nMan: Why don't you phone Angela and get your dress back?\nWoman: Yes, I think I will." },
@@ -1383,7 +999,7 @@
     {
     id: 19,
     pages: ["images/part1_test19_page1.jpg", "images/part1_test19_page2.jpg", "images/part1_test19_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test19_qbknke.mp3",
+    audioUrl: "audio/part1_test19.mp3",
     questions: [
       { text: "What regular exercise does David do at the moment?", options: ["A", "B", "C"], correct: 2, script: "Cathy: You're looking well, David! Have you been to the gym a lot recently or something?\nDavid: Well, I joined a gym earlier this year, but I stopped going - it was just too difficult. And expensive, too! I've done a lot of swimming instead, and I feel much better for it!\nCathy: It shows! I'm thinking of taking up tennis again. Would you be interested in a game one day? You used to be quite good, didn't you?\nDavid: Well, I haven't played for a long time but... why not?" },
       { text: "What should Suzie take to Emma's house?", options: ["A", "B", "C"], correct: 0, script: "Woman: Suzie? It's Emma. We've got to make some paper flowers so the classroom looks nice for the end-of-term party. Can you come to my house this evening to help me do it? There's some paint left over from last time, but I can't find any brushes. Have you got one? Bring it if you have. And if we have a pair of scissors each, we can work faster, so don't forget yours. We'll need coloured paper, but I'm getting that from college. See you around six." },
@@ -1397,7 +1013,7 @@
     {
     id: 20,
     pages: ["images/part1_test20_page1.jpg", "images/part1_test20_page2.jpg", "images/part1_test20_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test20_czz4oy.mp3",
+    audioUrl: "audio/part1_test20.mp3",
     questions: [
       { text: "What did the thieves steal?", options: ["A", "B", "C"], correct: 2, script: "Woman: What exactly is missing, sir?\nMan: I thought the thieves had taken the television set, because it wasn't in its usual place in the dining room. Then I went to check my CD player and CDs - I keep them on an antique chest of drawers. All the CDs were on the floor with the CD player. But the chest had completely disappeared. It wasn't in the garden either, which is where I found the television.\nWoman: Right sir. Well, can you give me a detailed description of it?" },
       { text: "What present will they take?", options: ["A", "B", "C"], correct: 0, script: "Woman: We ought to take a present if we're staying for the weekend.\nMan: Let's get something a bit different. People always take flowers and it's rather hot for chocolates. What about something for the children, like a DVD? Or... some unbreakable glasses they can all use outside or on picnics?\nWoman: Good idea. And let's get a jug to go with them. The children have probably got lots of DVDs." },
@@ -1411,7 +1027,7 @@
     {
     id: 21,
     pages: ["images/part1_test21_page1.jpg", "images/part1_test21_page2.jpg", "images/part1_test21_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test21_wqo8q1.mp3",
+    audioUrl: "audio/part1_test21.mp3",
     questions: [
       { text: "How will they book their flights?", options: ["A", "B", "C"], correct: 1, script: "Man: So what about our flights then, shall I book on the internet? Or do you want to go to a travel agent's?\nWoman: Well, actually, I've already been to the travel agent's and got some prices... They can offer us a better price than anything I've seen on the internet.\nMan: Great... well let's make a decision and then go ahead and book. We could phone them, couldn't we? Or is it better to pop in?\nWoman: I'd prefer not to phone because I want to pay in cash.\nMan: Okay." },
       { text: "What has the daughter forgotten to bring on holiday?", options: ["A", "B", "C"], correct: 0, script: "Girl: Mmm ... nice bathroom in this hotel! Can I borrow your shampoo, Mum? I left mine at home.\nMum: Okay, but put it back in my bag when you've finished.\nGirl: And I don't believe it! I must have forgotten to bring my hairbrush, too. I can't find it anywhere in my suitcase. I was sure I'd put it in!\nMum: You had! I've already put it in the bathroom with your other washing things. I don't know why you brought toothpaste though. We certainly didn't need two tubes! We're only here for four days." },
@@ -1425,7 +1041,7 @@
     {
     id: 22,
     pages: ["images/part1_test22_page1.jpg", "images/part1_test22_page2.jpg", "images/part1_test22_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test22_wbdzax.mp3",
+    audioUrl: "audio/part1_test22.mp3",
     questions: [
       { text: "What has the boy lost?", options: ["A", "B", "C"], correct: 1, script: "Boy: Mum - I love it here. The city's really interesting and it's quite easy to find my way round, thanks to the map you gave me - I don't know what I'd do without it. I've taken some great photos, but I left my camera on a tram so I won't be able to show you! And things are more expensive than I expected, so I don't think my money will last very long. Can you send me some more? Thanks. Speak to you again soon." },
       { text: "What time does the race begin?", options: ["A", "B", "C"], correct: 0, script: "Boy: I'm running the race on Saturday, but I don't know where it is or when it begins.\nMan: Well, you're going to run round the lake. All the runners have to meet in the car park and register by quarter to two, though the race won't actually start until half past. There should be about a hundred runners.\nBoy: When will it be over? I've got to catch a train at quarter past three.\nMan: It's 15 kilometres! You won't be on time for that!" },
@@ -1439,7 +1055,7 @@
     {
     id: 23,
     pages: ["images/part1_test23_page1.jpg", "images/part1_test23_page2.jpg", "images/part1_test23_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test23_qi7ift.mp3",
+    audioUrl: "audio/part1_test23.mp3",
     questions: [
       { text: "Which present will the girl receive?", options: ["A", "B", "C"], correct: 0, script: "Mum: What would you like for your birthday, Maria? Would you like a new carpet for your bedroom floor? Your room's quite dark - it would really make it brighter in there...\nMaria: Mmm ... well, I did see a wonderful collection of short stories in a shop yesterday. I'd really like that. And don't forget I'm going on holiday soon - a really nice leather suitcase would be great.\nMum: Oh, dear. I was sure you'd really love my idea, so I'm afraid I've already got it...\nMaria: Oh, Mum!" },
       { text: "Where will the tourists go last?", options: ["A", "B", "C"], correct: 2, script: "Guide: I hope you're all enjoying this walking tour of Kingston. We've visited the oldest building in the city - the castle. We still have the famous gardens to see and the trip on the river boat which we're going to do at the end of the day. But next I suggest that we have a break for lunch here in the town park. There's a café just over there and plenty of seats as well..." },
@@ -1453,7 +1069,7 @@
     {
     id: 24,
     pages: ["images/part1_test24_page1.jpg", "images/part1_test24_page2.jpg", "images/part1_test24_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test24_degwz9.mp3",
+    audioUrl: "audio/part1_test24.mp3",
     questions: [
       { text: "Which prize has the man just won?", options: ["A", "B", "C"], correct: 0, script: "Int: And in second place, Tim Davidson. Tim, would you like to say a few words?\nTim: Well, I want to thank everyone who has helped me to do so well today, because it's not just about me the player, there's my trainer, my manager, and my wife Jane. I know she'll love this beautiful glass bowl, so it won't be up on a dusty shelf with the cups I've won in the past. We'll enjoy looking at it every day. And I'll be back next year to win that silver plate! Thank you." },
       { text: "What was the man's first job?", options: ["A", "B", "C"], correct: 1, script: "Man: I know you think being a postman's not a very good job - long hours and not a lot of money - but I enjoy it. Better than some things I've done. When I first left school I spent a month or two cleaning windows, and then I got a job building houses. Now that was hard! Of course, when I was at school, I dreamt of becoming a pilot, but I failed to get on a training course." },
@@ -1467,7 +1083,7 @@
     {
     id: 25,
     pages: ["images/part1_test25_page1.jpg", "images/part1_test25_page2.jpg", "images/part1_test25_page3.jpg"],
-    audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test25_nfkwmz.mp3",
+    audioUrl: "audio/part1_test25.mp3",
     questions: [
       { text: "What did the man buy?", options: ["A", "B", "C"], correct: 2, script: "Woman: Hi, did you buy a new suit yesterday?\nMan: Well, I went to the shopping centre, but I had no idea how expensive suits are.\nWoman: I told you it would cost you a lot to buy one.\nMan: I know. Anyway, I saw lots of nice shirts and stuff I liked.\nWoman: But you've already got loads of shirts. You don't really need any more.\nMan: Actually, I ended up with a rather stylish new sweater. When I've saved enough to buy a suit, we'd better go shopping together." },
       { text: "How will the woman help the man?", options: ["A", "B", "C"], correct: 1, script: "Man: Hi, Clara - just the person! Look, I'm giving a dinner party for my parents' wedding anniversary and might need a bit of help.\nWoman: I'm not surprised. You can't cook, can you? All you buy is ready-meals from the supermarket.\nMan: I know, but I'm going to get everything online from a company that cooks and delivers food to your home. I just want some help with choosing some dishes from their menu.\nWoman: That sounds fun. Can I also choose a nice dessert? So, am I invited to the party?\nMan: Of course." },
@@ -1484,7 +1100,7 @@
 
       const realPart2Data = [
         {
-          id: 1, pages: ["images/part2_test1.jpg"], audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test1_nccyip.mp3",
+          id: 1, pages: ["images/part2_test1.jpg"], audioUrl: "audio/part2_test1.mp3",
          fullScript: `Presenter: ... and now if you're a regular listener to this programme, you'll know that it's time for our weekly competition. Last week's prize of two theatre tickets was won by Bill Martins. Congratulations, Bill. I hope you've received your tickets by now.
 This week we're offering a classical CD to the first listener who can name the piece of music and the person who wrote it. I'm going to play the piece in a few minutes, but before I do, you need to get a pencil and a piece of paper, as I'm going to give you some help which should make your job a little easier. Are you ready? Right. Now, listen carefully, as you might be this week's lucky winner.
 Although the person who wrote this piece of classical music was born in Italy, his parents were French and he spent most of his life in Spain. Have you got that? On to the second point: there is also a famous play which has the same title as this music and which is usually performed in the open air - in the summer. Any idea yet? I should warn you that it's not that easy.
@@ -1511,7 +1127,7 @@ So that's four things to remember. And the phone number to ring if you can give 
         {
            id: 2,
       pages: ["images/part2_test2.jpg"],
-      audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test2_wwfj7g.mp3",
+      audioUrl: "audio/part2_test2.mp3",
       fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Message: This is the Arts Festival Box Office. There is no one here to take your call, but do not hang up, as further information follows.
@@ -1543,7 +1159,7 @@ Thank you for calling.`,
         {
           id: 3,
   pages: ["images/part2_test3.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test3_z5dwrp.mp3",
+  audioUrl: "audio/part2_test3.mp3",
   fullScript: `Presenter: Hi there. On last week's programme we interviewed the man behind the idea of the International Camps. So I thought that this week you'd be interested to hear more about one of the Camps which will be held later this year. Over to you, Michael...
 
 Michael: Thank you. Yes, the Camp is open to everyone between the ages of 18 to 23. You don't have to be a student - you don't even have to be employed, but you must be able to speak one foreign language in addition to your mother tongue.
@@ -1577,7 +1193,7 @@ Michael: Well, you have to find your own way to the Camp, so it's up to you whet
         {
 		id: 4,
   pages: ["images/part2_test4.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test4_ef9ppn.mp3",
+  audioUrl: "audio/part2_test4.mp3",
   fullScript: `Guide: Welcome, ladies and gentlemen, to the Morecambe Museum of Fashion. Before we go up to the fashion exhibition 'Clothes of the Future', I would like to show you some slides on the screen, and say a few words about the history of fashion. I will also mention some of the important people in fashion. This will provide an introduction for you and will prepare you for the clothes that we're going to see in the exhibition.
 
 As I'm sure you know, nowadays fashion is something that almost everybody enjoys. People of all age groups and all incomes usually have an interest in what they wear. But this has only recently happened, and I will tell you why.
@@ -1609,7 +1225,7 @@ Let's go inside and have a look at the exciting clothes that are waiting for us.
         {
 		id: 5,
   pages: ["images/part2_test5.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test5_wpfd8v.mp3",
+  audioUrl: "audio/part2_test5.mp3",
   fullScript: `And that's the weather forecast. And now we know what the weather's going to be like, let's have a look at what we've got for you tomorrow on TV31.
 
 Most of the morning is taken up with children's television. As it's Saturday, we've got programmes for children from the under fives to teenagers. We start the day at 7.00 with cartoons and programmes for the very young. These go on until 9.00 when we have a film specially made for television called The Railway Princess. It was first shown about six months ago and we've had lots of requests to show it again. The film is based on Jenny Johnson's best-selling children's book. Then from 10.30 until 12.00, we continue with a magazine programme for 5- to 12-year-olds. There's something for everyone - animals, art, sport, the countryside. At lunchtime, from 12.00 till 2.00, we have something for teenagers - Here and Now - our music programme with all the latest groups and singers, and the results of last week's competition.
@@ -1642,7 +1258,7 @@ Our evening carries on with plenty of entertainment for all the family. At nine 
   },
         {id: 6,
   pages: ["images/part2_test6.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test6_cd6kqt.mp3",
+  audioUrl: "audio/part2_test6.mp3",
   fullScript: `Presenter: In today's programme, David Green has come along to tell us all about Waterside Shopping Centre near Northport. Good morning, David.
 
 David: Good morning. Well, I visited Waterside last week and I think it has something for everyone and I would recommend it for a day out. It's taken three years to build and finally opened three weeks ago, two months later than planned.
@@ -1687,7 +1303,7 @@ Presenter: And so that's all for today's programme ...`,
   },
         {id: 7,
   pages: ["images/part2_test7.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test7_mybenf.mp3",
+  audioUrl: "audio/part2_test7.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Presenter: And that was a lovely song especially for Sandra. I hope you were listening Sandra. Now, it's time for our 'What's on around Carlisle', this weekend. There are lots of things happening. First of all, Lambly school has contacted us to tell us all about the concert they are giving on Saturday evening, that's the 8th. The music starts at 7.30 not at 7 o'clock as advertised, and will finish about 8.30 after which coffee will be available. They say it's an evening of songs and dances for everyone. There'll be light refreshments afterwards in the library. That will be included in the cost of the ticket. Do go along to this concert as the school will use all the money to buy some new sports equipment for the children. Last year's concert was a great success and the school was able to buy a new computer for the children to use and also pay for a trip to London.
@@ -1725,7 +1341,7 @@ Vào tối thứ Bảy, có một bài nói chuyện cho Câu lạc bộ Quốc 
   },
         {id: 8,
   pages: ["images/part2_test8.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test8_ckotjy.mp3",
+  audioUrl: "audio/part2_test8.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: Right, everyone - about the trip to the Jubilee Arts Centre next Wednesday. As you know, we have tickets for the Centre's two theatres and the concert hall. Those of you with concert tickets will hear piano music by Chopin and Schumann. Those with tickets for the main theatre will see Shakespeare's Twelfth Night, while people going to the smaller theatre will see The Wild Duck by Ibsen. Although all the theatre and concert tickets have gone, if anyone else would like to join us on the trip I can get tickets for the Arts Centre cinema to see the Australian comedy film, Spider and Rose.
@@ -1775,7 +1391,7 @@ Sau buổi biểu diễn, huấn luyện viên sẽ đón chúng tôi tại lố
    },
         {id: 9,
   pages: ["images/part2_test9.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test9_uiejq4.mp3",
+  audioUrl: "audio/part2_test9.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Man: And today I'm talking to Angela Morgan. Angela, what made you decide to fly round the world in a helicopter?
@@ -1849,7 +1465,7 @@ Người phụ nữ: Chà, thật ngạc nhiên là tôi không bỏ lỡ việc
   },
         {id: 10,
   pages: ["images/part2_test10.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test10_vlkkx2.mp3",
+  audioUrl: "audio/part2_test10.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: Well, good evening everyone. I've come along to talk to you about my painting. It was just a hobby but it's really more than that now. I used to paint in the evenings after work, but now I work four days a week instead of five. That means I spend Friday, Saturday and Sunday on my painting. I have pictures in local exhibitions at least once a month.
@@ -1900,7 +1516,7 @@ Chà, tôi sẽ kết thúc ngay bây giờ bằng cách cho bạn xem một đo
   },
         {id: 11,
   pages: ["images/part2_test11.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test11_vticuj.mp3",
+  audioUrl: "audio/part2_test11.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: Welcome to this week's book programme. We've got lots of great new books to tell you about.
@@ -1954,7 +1570,7 @@ Cuốn sách cuối cùng trong tuần này là Những ngày nghỉ ở Châu �
   },
         {id: 12,
   pages: ["images/part2_test12.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test12_vfiari.mp3",
+  audioUrl: "audio/part2_test12.mp3",
   fullScript: `Man: People always ask me why I only travel the hard way! A lot of television travel programmes are about relaxing holidays on the beach, but I've only ever made documentaries about really long trips. The last trip I did was a 50,000-mile journey around the Pacific Ocean, and it took 12 months. But then my very first trip was a 'round the world' journey, and the most difficult one was probably a car journey from the North Pole to the South Pole!
 
 As you can imagine, I've seen a lot of the world! I'm lucky to be in really excellent health, but life is very short and I've done so much travelling that I want a change. Travelling long distances makes you extremely tired, and although it's still a great pleasure for me, I want to do something more relaxing now.
@@ -2000,7 +1616,7 @@ Có lẽ nếu tôi dành nhiều thời gian hơn ở nhà, tôi có thể vi�
   },
         {id: 13,
   pages: ["images/part2_test13.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test13_ssmvvt.mp3",
+  audioUrl: "audio/part2_test13.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Man: Britta, you're English, but you live in Berlin. Have you lived here for a long time?
@@ -2078,7 +1694,7 @@ Người đàn ông: Cảm ơn bạn đã nói chuyện với chúng tôi, Britt
   },
         {id: 14,
   pages: ["images/part2_test14.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test14_nat2v9.mp3",
+  audioUrl: "audio/part2_test14.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: Frank, tell us about some of the ships you've discovered.
@@ -2132,7 +1748,7 @@ Vì lặn là một sở thích nguy hiểm nên bạn không nên tự học. T
   },
         {id: 15,
   pages: ["images/part2_test15.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test15_pvhyn6.mp3",
+  audioUrl: "audio/part2_test15.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Man: Rachel, tell us how your shows for children started. You studied art at college, didn't you?
@@ -2206,7 +1822,7 @@ Người phụ nữ: Họ làm. Tôi có nhiều chương trình khác nhau dàn
   },
         {id: 16,
   pages: ["images/part2_test16.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test16_telmnr.mp3",
+  audioUrl: "audio/part2_test16.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: With us today, to tell us about his trip across Africa, is the biologist Paul Hart.
@@ -2260,7 +1876,7 @@ Cuối cùng, tôi trở về nhà, và tôi trở lại với gia đình và b�
   },
         {id: 17,
   pages: ["images/part2_test17.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test17_srvvfq.mp3",
+  audioUrl: "audio/part2_test17.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Interviewer: And today in the studio we have a familiar face on television, Angela Bond, the news reporter. Angela, your job has taken you all over the world, hasn't it?
@@ -2338,7 +1954,7 @@ Người phỏng vấn: Angela - cảm ơn.`,
  },
         { id: 18,
   pages: ["images/part2_test18.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test18_iynip3.mp3",
+  audioUrl: "audio/part2_test18.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Interviewer: Oh, what a wonderful view! I'm here with Jack Williams, who's telling me about his home town of Swanton.
@@ -2412,7 +2028,7 @@ Jack: Giáo dục rất quan trọng đối với chúng tôi. Chúng tôi có m
   },
         {id: 19,
   pages: ["images/part2_test19.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test19_hpvzuw.mp3",
+  audioUrl: "audio/part2_test19.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Interviewer: My guest today is the star of the London Ballet Company, twenty-two-year-old Elena Karpov. Elena, you were born in Bulgaria. Did you always want to be a dancer?
@@ -2492,7 +2108,7 @@ Elena: Cảm ơn bạn.`,
   },
         {id: 20,
   pages: ["images/part2_test20.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test20_jyiklf.mp3",
+  audioUrl: "audio/part2_test20.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: Hello, I'm Sarah Brown, and I'm here to tell you about my job as a weather forecaster.
@@ -2782,7 +2398,7 @@ Linda: Khoảng thời gian tuyệt nhất trong ngày là giờ ăn trưa, khi 
   },
         {id: 24,
   pages: ["images/part2_test24.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test24_olp6hb.mp3",
+  audioUrl: "audio/part2_test24.mp3",
   fullScript: `Now we are ready to start. Listen carefully. You will hear the recording twice.
 
 Woman: My guest today is Tim Jones, who organises an international summer course for young musicians. Tim, tell us all about it.
@@ -2856,7 +2472,7 @@ Tim: Đúng vậy. Tôi đặt phòng hòa nhạc và lên kế hoạch cho các
   },
         {id: 25,
   pages: ["images/part2_test25.jpg"],
-  audioUrl: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test25_ow2axw.mp3",
+  audioUrl: "audio/part2_test25.mp3",
   fullScript: `Man: Today I'm talking to Marta Stanton, who runs her own 'mobile' restaurant. Marta, how did you get into the restaurant business?
 
 Marta: Well, I learnt to cook at college. I always wanted to open my own restaurant - but had no money. So I got a job as a chef. I had all sorts of ideas for new dishes, which the staff thought would sell, but the guy who owned the place wasn't interested. That's when a friend told me about the 'mobile restaurant' idea. It sounded great.
@@ -3022,36 +2638,7 @@ for (let i = 0; i < 30; i++) {
                 `images/part1_test${i + 1}_page2.jpg`,
                 `images/part1_test${i + 1}_page3.jpg`
             ],
-            audioUrl: ({1: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test1_xgbzrv.mp3",
-    2: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test2_enovws.mp3",
-    3: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test3_lmi8zi.mp3",
-    4: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test4_saesvz.mp3",
-    5: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test5_jif4eo.mp3",
-    6: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test6_dlbkt7.mp3",
-    7: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test7_dunjng.mp3",
-    8: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test8_rfkw2h.mp3",
-    9: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test9_auq1g9.mp3",
-    10: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test10_ssr4pp.mp3",
-    11: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test11_w0mgxu.mp3",
-    12: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test12_gggkbh.mp3",
-    13: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test13_x7jsei.mp3",
-    14: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test14_lce8yh.mp3",
-    15: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test15_nlkkeo.mp3",
-    16: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test16_xatzq1.mp3",
-    17: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test17_uoeffp.mp3",
-    18: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test18_c0wpv9.mp3",
-    19: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test19_qbknke.mp3",
-    20: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test20_czz4oy.mp3",
-    21: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test21_wqo8q1.mp3",
-    22: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test22_wbdzax.mp3",
-    23: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test23_qi7ift.mp3",
-    24: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test24_degwz9.mp3",
-    25: "https://res.cloudinary.com/dypsrwyne/video/upload/part1_test25_nfkwmz.mp3",
-    26: "audio/part1_test26.mp3",
-    27: "audio/part1_test27.mp3",
-    28: "audio/part1_test28.mp3",
-    29: "audio/part1_test29.mp3",
-    30: "audio/part1_test30.mp3"})[i + 1] || `audio/part1_test${i + 1}.mp3`,
+            audioUrl: `audio/part1_test${i + 1}.mp3`,
             questions: [
                 { text: "Question " + (i + 1), options: ["A", "B", "C"], correct: 1, script: "" }
             ]
@@ -3067,36 +2654,7 @@ for (let i = 0; i < 30; i++) {
         part2Tests.push({
             id: i + 1,
             pages: [`images/part2_test${i + 1}.jpg`],
-            audioUrl: ({1: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test1_nccyip.mp3",
-    2: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test2_wwfj7g.mp3",
-    3: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test3_z5dwrp.mp3",
-    4: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test4_ef9ppn.mp3",
-    5: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test5_wpfd8v.mp3",
-    6: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test6_cd6kqt.mp3",
-    7: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test7_mybenf.mp3",
-    8: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test8_ckotjy.mp3",
-    9: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test9_uiejq4.mp3",
-    10: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test10_vlkkx2.mp3",
-    11: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test11_vticuj.mp3",
-    12: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test12_vfiari.mp3",
-    13: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test13_ssmvvt.mp3",
-    14: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test14_nat2v9.mp3",
-    15: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test15_pvhyn6.mp3",
-    16: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test16_telmnr.mp3",
-    17: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test17_srvvfq.mp3",
-    18: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test18_iynip3.mp3",
-    19: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test19_hpvzuw.mp3",
-    20: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test20_jyiklf.mp3",
-    21: "audio/part2_test21.mp3",
-    22: "audio/part2_test22.mp3",
-    23: "audio/part2_test23.mp3",
-    24: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test24_olp6hb.mp3",
-    25: "https://res.cloudinary.com/dypsrwyne/video/upload/part2_test25_ow2axw.mp3",
-    26: "audio/part2_test26.mp3",
-    27: "audio/part2_test27.mp3",
-    28: "audio/part2_test28.mp3",
-    29: "audio/part2_test29.mp3",
-    30: "audio/part2_test30.mp3"})[i + 1] || `audio/part2_test${i + 1}.mp3`,
+            audioUrl: `audio/part2_test${i + 1}.mp3`,
             fullScript: null,
             highlights: [],
             questions: [
@@ -3124,7 +2682,6 @@ for (let i = 0; i < 30; i++) {
       let loopStart = null;
       let loopEnd = null;
       let loopActive = false;
-      let currentFilter = 'all'; // all | unanswered | bookmarked
 
       const $ = (s) => document.querySelector(s);
       const $$ = (s) => document.querySelectorAll(s);
@@ -3133,51 +2690,20 @@ for (let i = 0; i < 30; i++) {
         return currentPart === 1 ? part1Tests[currentTestIndex] : part2Tests[currentTestIndex];
       }
 
-      // ───────── TOAST ─────────
-      function showToast(msg, type = 'default', duration = 2500) {
-        const c = $('#toastContainer');
-        const t = document.createElement('div');
-        t.className = 'toast ' + (type !== 'default' ? type : '');
-        t.textContent = msg;
-        c.appendChild(t);
-        setTimeout(() => {
-          t.style.opacity = '0';
-          t.style.transform = 'translateX(20px)';
-          t.style.transition = '0.3s ease';
-          setTimeout(() => t.remove(), 300);
-        }, duration);
-      }
-
-      // ───────── MODAL ─────────
-      let modalCallback = null;
-      function showModal(icon, title, desc, confirmText, onConfirm) {
-        $('#modalIcon').textContent = icon;
-        $('#modalTitle').textContent = title;
-        $('#modalDesc').textContent = desc;
-        $('#modalConfirm').textContent = confirmText;
-        modalCallback = onConfirm;
-        $('#modalOverlay').classList.add('show');
-      }
-      function closeModal() {
-        $('#modalOverlay').classList.remove('show');
-        modalCallback = null;
-      }
-      $('#modalCancel').onclick = closeModal;
-      $('#modalConfirm').onclick = () => {
-        if (modalCallback) modalCallback();
-        closeModal();
-      };
-      $('#modalOverlay').onclick = (e) => { if (e.target === $('#modalOverlay')) closeModal(); };
-
       // ───────── ZOOM ─────────
       function applyZoom() {
-        $$('#imageScroll img').forEach(img => { img.style.transform = `scale(${zoomLevel})`; });
+        $$('#imageScroll img').forEach(img => {
+          img.style.transform = `scale(${zoomLevel})`;
+        });
         $('#zoomLabel').textContent = Math.round(zoomLevel * 100) + '%';
       }
       function initZoom() {
-        $('#zoomInBtn').onclick = () => { if (zoomLevel < 3) { zoomLevel += 0.2; applyZoom(); } };
-        $('#zoomOutBtn').onclick = () => { if (zoomLevel > 0.3) { zoomLevel -= 0.2; applyZoom(); } };
-        $('#zoomResetBtn').onclick = () => { zoomLevel = 1; applyZoom(); };
+        $('#zoomInBtn').onclick = () => { if (zoomLevel < 3) { zoomLevel += 0.2;
+            applyZoom(); } };
+        $('#zoomOutBtn').onclick = () => { if (zoomLevel > 0.3) { zoomLevel -= 0.2;
+            applyZoom(); } };
+        $('#zoomResetBtn').onclick = () => { zoomLevel = 1;
+          applyZoom(); };
         $('#imageScroll').addEventListener('wheel', (e) => {
           if (e.ctrlKey) {
             e.preventDefault();
@@ -3208,58 +2734,16 @@ for (let i = 0; i < 30; i++) {
         applyZoom();
       }
 
-      // ───────── FILTER ─────────
-      function getFilteredQuestions() {
-        const test = getCurrentTest();
-        return test.questions.map((q, i) => ({ q, i })).filter(({ q, i }) => {
-          if (currentFilter === 'unanswered') return userAnswers[i] === null || userAnswers[i] === undefined;
-          if (currentFilter === 'bookmarked') return bookmarks[i];
-          return true;
-        });
-      }
-
-      function updateFilterButtons() {
-        const test = getCurrentTest();
-        const total = test.questions.length;
-        const unanswered = test.questions.filter((_, i) => userAnswers[i] === null || userAnswers[i] === undefined).length;
-        const bm = test.questions.filter((_, i) => bookmarks[i]).length;
-        $('#filterAll').textContent = 'Tất cả';
-        $('#filterUnanswered').textContent = `⭕ Chưa trả lời (${unanswered})`;
-        $('#filterBookmarked').textContent = `⭐ Đánh dấu (${bm})`;
-        ['filterAll', 'filterUnanswered', 'filterBookmarked'].forEach(id => {
-          $('#' + id).classList.remove('active');
-        });
-        const activeId = currentFilter === 'all' ? 'filterAll' : currentFilter === 'unanswered' ? 'filterUnanswered' : 'filterBookmarked';
-        $('#' + activeId).classList.add('active');
-        const shown = getFilteredQuestions().length;
-        $('#filterCount').textContent = currentFilter !== 'all' ? `Hiển thị ${shown}/${total}` : '';
-      }
-
       // ───────── RENDER QUESTIONS ─────────
       function renderQuestionList() {
         const test = getCurrentTest();
         const list = $('#questionList');
         list.innerHTML = '';
-        const filtered = getFilteredQuestions();
-
-        if (filtered.length === 0) {
-          list.innerHTML = '<div style="padding:30px;text-align:center;color:var(--text-muted);font-size:0.85rem;">Không có câu hỏi nào phù hợp bộ lọc</div>';
-          updateFilterButtons();
-          return;
-        }
-
-        filtered.forEach(({ q, idx: _idx }, _) => {
-          const idx = _idx !== undefined ? _idx : filtered.findIndex(f => f.q === q && f.i !== undefined) !== -1 ? filtered.find(f => f.q === q).i : 0;
-        });
-
-        // Re-iterate properly
-        list.innerHTML = '';
-        getFilteredQuestions().forEach(({ q, i: idx }) => {
+        test.questions.forEach((q, idx) => {
           const card = document.createElement('div');
           card.className = 'q-card';
           card.dataset.qIndex = idx;
           if (userAnswers[idx] !== null && userAnswers[idx] !== undefined) card.classList.add('answered');
-          if (bookmarks[idx]) card.classList.add('bookmarked-card');
 
           const opts = (currentPart === 1 ? ['A', 'B', 'C'] : q.options);
           let optsHtml = '';
@@ -3272,21 +2756,21 @@ for (let i = 0; i < 30; i++) {
               else if (sel && optIdx !== q.correct) cls += ' wrong';
             }
             const letter = String.fromCharCode(65 + optIdx);
-            optsHtml += `<div class="${cls}" data-opt="${optIdx}"><span>${letter}</span>${currentPart === 1 ? '' : ' <span style="font-size:0.72rem;font-weight:500;white-space:normal;word-break:break-word;">' + optText + '</span>'}</div>`;
+            optsHtml += `<div class="${cls}" data-opt="${optIdx}"><span>${letter}</span> ${currentPart === 1 ? '' : '<span>' + optText + '</span>'}</div>`;
           });
 
-          const qNum = currentPart === 1 ? idx + 1 : idx + 8;
           card.innerHTML = `
-            <div class="q-header">
-              <span class="q-num">Câu ${qNum}</span>
-              <span class="q-text">${q.text || '(Xem hình)'}</span>
-              <button class="q-bookmark ${bookmarks[idx] ? 'bookmarked' : ''}" data-bm="${idx}" title="Đánh dấu câu hỏi">⭐</button>
-            </div>
-            <div class="options-row">${optsHtml}</div>
-          `;
+        <div class="q-header">
+        <span class="q-num">${currentPart===1? idx+1 : idx+8}</span>
+        <span class="q-text">${q.text}</span>
+        <button class="q-bookmark ${bookmarks[idx] ? 'bookmarked' : ''}" data-bm="${idx}" title="Đánh dấu">⭐</button>
+        </div>
+        <div class="options-row">${optsHtml}</div>
+        `;
           list.appendChild(card);
         });
 
+        // Gắn sự kiện click cho option
         $$('.opt').forEach(btn => {
           btn.addEventListener('click', function(e) {
             e.stopPropagation();
@@ -3302,19 +2786,18 @@ for (let i = 0; i < 30; i++) {
           });
         });
 
+        // Gắn sự kiện bookmark
         $$('.q-bookmark').forEach(bm => {
           bm.addEventListener('click', function(e) {
             e.stopPropagation();
             const idx = parseInt(this.dataset.bm);
             bookmarks[idx] = !bookmarks[idx];
-            if (bookmarks[idx]) showToast('⭐ Đã đánh dấu câu ' + (currentPart === 1 ? idx + 1 : idx + 8), 'default', 1500);
             renderQuestionList();
             saveState();
           });
         });
 
         updateProgress();
-        updateFilterButtons();
       }
 
       function updateProgress() {
@@ -3330,7 +2813,8 @@ for (let i = 0; i < 30; i++) {
 
       function updateScore() {
         const test = getCurrentTest();
-        let correct = 0, answered = 0;
+        let correct = 0,
+          answered = 0;
         test.questions.forEach((q, i) => {
           if (userAnswers[i] !== null && userAnswers[i] !== undefined) {
             answered++;
@@ -3348,13 +2832,18 @@ for (let i = 0; i < 30; i++) {
         timerInterval = setInterval(() => {
           timerSeconds--;
           updateTimerDisplay();
-          if (timerSeconds <= 0) { stopTimer(); submitQuiz(); }
+          if (timerSeconds <= 0) {
+            stopTimer();
+            submitQuiz();
+          }
         }, 1000);
       }
+
       function stopTimer() {
         if (timerInterval) clearInterval(timerInterval);
         timerInterval = null;
       }
+
       function updateTimerDisplay() {
         const m = Math.floor(timerSeconds / 60);
         const s = timerSeconds % 60;
@@ -3365,25 +2854,38 @@ for (let i = 0; i < 30; i++) {
 
       // ───────── AUDIO ─────────
       function stopAudio() {
-        if (currentAudio) { currentAudio.pause(); currentAudio.currentTime = 0; currentAudio = null; }
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+          currentAudio = null;
+        }
         $('#playPauseBtn').textContent = '▶️';
         $('#seekSlider').value = 0;
         $('#timeDisplay').textContent = '00:00 / 00:00';
-        loopStart = null; loopEnd = null; loopActive = false;
+        loopStart = null;
+        loopEnd = null;
+        loopActive = false;
         $('#loopBtn').style.background = '';
       }
+
       function formatTime(sec) {
-        const m = Math.floor(sec / 60), s = Math.floor(sec % 60);
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
         return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
       }
+
       function playTestAudio() {
         const test = getCurrentTest();
-        if (!test.audioUrl) { showToast('⚠️ Không có file audio cho test này.', 'danger'); return; }
+        if (!test.audioUrl) {
+          alert('Không có file audio cho test này.');
+          return;
+        }
         stopAudio();
         const audio = new Audio(test.audioUrl);
         audio.playbackRate = parseFloat($('#speedSelect').value) || 1;
         audio.volume = parseFloat($('#volumeSlider').value) || 0.8;
         currentAudio = audio;
+
         audio.addEventListener('loadedmetadata', () => {
           $('#seekSlider').max = audio.duration;
           $('#timeDisplay').textContent = '00:00 / ' + formatTime(audio.duration);
@@ -3395,19 +2897,29 @@ for (let i = 0; i < 30; i++) {
             audio.currentTime = loopStart || 0;
           }
         });
-        audio.addEventListener('ended', () => { $('#playPauseBtn').textContent = '▶️'; currentAudio = null; });
+        audio.addEventListener('ended', () => {
+          $('#playPauseBtn').textContent = '▶️';
+          currentAudio = null;
+        });
         audio.addEventListener('play', () => { $('#playPauseBtn').textContent = '⏸️'; });
         audio.addEventListener('pause', () => { $('#playPauseBtn').textContent = '▶️'; });
         audio.play().catch(e => {
-          showToast('⚠️ Không thể phát audio: ' + e.message, 'danger');
+          alert('Không thể phát audio: ' + e.message);
           currentAudio = null;
           $('#playPauseBtn').textContent = '▶️';
         });
       }
+
       function togglePlayPause() {
-        if (!currentAudio) { playTestAudio(); return; }
-        if (currentAudio.paused) currentAudio.play();
-        else currentAudio.pause();
+        if (!currentAudio) {
+          playTestAudio();
+          return;
+        }
+        if (currentAudio.paused) {
+          currentAudio.play();
+        } else {
+          currentAudio.pause();
+        }
       }
 
       // ───────── SUBMIT ─────────
@@ -3417,31 +2929,28 @@ for (let i = 0; i < 30; i++) {
         renderQuestionList();
         updateScore();
         $('#submitBtn').style.display = 'none';
-        $('#reviewBtn').style.display = 'inline-flex';
-        // Save to history
-        saveHistory();
+        $('#reviewBtn').style.display = 'inline-block';
         saveState();
-        showToast('✅ Đã nộp bài! Xem đáp án bên dưới.', 'success');
       }
 
       function resetQuiz() {
         revealed = false;
         userAnswers = {};
         bookmarks = {};
-        currentFilter = 'all';
         stopAudio();
         stopTimer();
         $('#scriptPanel').classList.remove('show');
-        $('#submitBtn').style.display = 'inline-flex';
+        $('#submitBtn').style.display = 'inline-block';
         $('#reviewBtn').style.display = 'none';
-        loopStart = null; loopEnd = null; loopActive = false;
+        loopStart = null;
+        loopEnd = null;
+        loopActive = false;
         $('#loopBtn').style.background = '';
         renderImagePanel();
         renderQuestionList();
         updateScore();
         startTimer();
         saveState();
-        showToast('🔄 Đã làm lại bài mới!', 'default', 1500);
       }
 
       // ───────── SCRIPT ─────────
@@ -3464,102 +2973,32 @@ for (let i = 0; i < 30; i++) {
         }
         panel.classList.toggle('show');
       }
-
-      // ───────── HISTORY ─────────
-      function getHistory() {
-        try { return JSON.parse(localStorage.getItem('listening_history') || '[]'); } catch { return []; }
-      }
-      function saveHistory() {
-        const test = getCurrentTest();
-        let correct = 0, answered = 0;
-        test.questions.forEach((q, i) => {
-          if (userAnswers[i] !== null && userAnswers[i] !== undefined) {
-            answered++;
-            if (userAnswers[i] === q.correct) correct++;
-          }
-        });
-        const total = test.questions.length;
-        const entry = {
-          id: Date.now(),
-          part: currentPart,
-          testIndex: currentTestIndex,
-          testId: test.id,
-          correct,
-          answered,
-          total,
-          time: new Date().toLocaleString('vi-VN'),
-          elapsed: 1200 - timerSeconds
-        };
-        const history = getHistory();
-        history.unshift(entry);
-        if (history.length > 100) history.pop();
-        localStorage.setItem('listening_history', JSON.stringify(history));
-        renderHistory();
-      }
-
-      function renderHistory() {
-        const history = getHistory();
-        const list = $('#historyList');
-        if (history.length === 0) {
-          list.innerHTML = '<div class="history-empty">📭 Chưa có lịch sử làm bài nào<br><br><small>Hãy nộp bài để lưu kết quả!</small></div>';
-          return;
-        }
-        list.innerHTML = history.map((h, i) => {
-          const pct = h.total > 0 ? Math.round(h.correct / h.total * 100) : 0;
-          const scoreClass = pct >= 70 ? '' : pct >= 50 ? 'medium' : 'poor';
-          const elapsed = h.elapsed ? Math.floor(h.elapsed / 60) + 'p ' + (h.elapsed % 60) + 's' : '--';
-          return `
-            <div class="history-item" onclick="loadFromHistory(${i})">
-              <div class="history-item-header">
-                <span class="history-item-test">Part ${h.part} · Test ${h.testIndex + 1}</span>
-                <span class="history-item-score ${scoreClass}">${h.correct}/${h.total} (${pct}%)</span>
-              </div>
-              <div class="history-item-meta">
-                <span>⏰ ${h.time}</span>
-                <span>⌛ ${elapsed}</span>
-              </div>
-              <button class="history-del" onclick="deleteHistory(event,${h.id})" title="Xóa mục này">🗑️</button>
-            </div>
-          `;
-        }).join('');
-      }
-
-      window.loadFromHistory = function(idx) {
-        const history = getHistory();
-        const h = history[idx];
-        if (!h) return;
-        currentPart = h.part;
-        currentTestIndex = h.testIndex;
-        $('#partSelect').value = currentPart;
-        populateTestSelect();
-        loadTest();
-        $('#historyPanel').classList.remove('open');
-        showToast(`📂 Đã tải Part ${h.part} Test ${h.testIndex + 1}`, 'default', 2000);
-      };
-
-      window.deleteHistory = function(e, id) {
-        e.stopPropagation();
-        const history = getHistory().filter(h => h.id !== id);
-        localStorage.setItem('listening_history', JSON.stringify(history));
-        renderHistory();
-        showToast('🗑️ Đã xóa mục lịch sử', 'default', 1500);
-      };
-
-      function clearAllHistory() {
-        showModal('🗑️', 'Xóa tất cả lịch sử', 'Bạn có chắc muốn xóa toàn bộ lịch sử làm bài? Hành động này không thể hoàn tác.', 'Xóa tất cả', () => {
-          localStorage.removeItem('listening_history');
-          renderHistory();
-          showToast('🗑️ Đã xóa toàn bộ lịch sử', 'danger', 2000);
-        });
-      }
-
+		function showNote() {
+		  const test = getCurrentTest();
+		  if (currentPart !== 2) {
+			alert('Chức năng tóm tắt chỉ có cho Part 2.');
+			return;
+		  }
+		  const panel = $('#notePanel');
+		  const summary = part2Notes[test.id];
+		  panel.innerHTML = summary || 'Chưa có tóm tắt cho test này.';
+		  panel.classList.toggle('show');
+		}
       // ───────── PERSISTENCE ─────────
       function saveState() {
-        const state = { currentPart, currentTestIndex, userAnswers, bookmarks, revealed, timerSeconds };
-        localStorage.setItem('listening_app_state_v2', JSON.stringify(state));
+        const state = {
+          currentPart,
+          currentTestIndex,
+          userAnswers,
+          bookmarks,
+          revealed,
+          timerSeconds,
+        };
+        localStorage.setItem('listening_app_state', JSON.stringify(state));
       }
+
       function loadState() {
-        const raw = localStorage.getItem('listening_app_state_v2') || localStorage.getItem('listening_app_state');
+        const raw = localStorage.getItem('listening_app_state');
         if (!raw) return;
         try {
           const state = JSON.parse(raw);
@@ -3569,7 +3008,7 @@ for (let i = 0; i < 30; i++) {
           bookmarks = state.bookmarks || {};
           revealed = state.revealed || false;
           timerSeconds = state.timerSeconds || 1200;
-        } catch(e) {}
+        } catch (e) { /* ignore */ }
       }
 
       // ───────── NAVIGATION ─────────
@@ -3585,16 +3024,19 @@ for (let i = 0; i < 30; i++) {
         }
         sel.value = currentTestIndex;
       }
+
       function loadTest() {
-        stopAudio(); stopTimer();
+        stopAudio();
+        stopTimer();
         const test = getCurrentTest();
         userAnswers = {};
         bookmarks = {};
         revealed = false;
-        currentFilter = 'all';
-        test.questions.forEach((_, i) => { userAnswers[i] = null; bookmarks[i] = false; });
+        test.questions.forEach((_, i) => { userAnswers[i] = null;
+          bookmarks[i] = false; });
         $('#scriptPanel').classList.remove('show');
-        $('#submitBtn').style.display = 'inline-flex';
+		$('#notePanel').classList.remove('show');   // thêm dòng này
+        $('#submitBtn').style.display = 'inline-block';
         $('#reviewBtn').style.display = 'none';
         renderImagePanel();
         renderQuestionList();
@@ -3608,27 +3050,25 @@ for (let i = 0; i < 30; i++) {
       // ───────── DARK MODE ─────────
       function initDarkMode() {
         const toggle = $('#darkToggle');
-        const saved = localStorage.getItem('dark_mode_v2');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (saved === 'light' || (!saved && !prefersDark)) {
-          document.body.classList.add('light');
-          toggle.textContent = '🌙';
-        } else {
-          toggle.textContent = '☀️';
+        const saved = localStorage.getItem('dark_mode');
+        if (saved === 'true' || (!saved && prefersDark)) {
+          document.body.classList.add('dark');
         }
         toggle.onclick = () => {
-          document.body.classList.toggle('light');
-          const isLight = document.body.classList.contains('light');
-          toggle.textContent = isLight ? '🌙' : '☀️';
-          localStorage.setItem('dark_mode_v2', isLight ? 'light' : 'dark');
+          document.body.classList.toggle('dark');
+          localStorage.setItem('dark_mode', document.body.classList.contains('dark'));
         };
       }
 
       // ───────── FULLSCREEN ─────────
       function initFullscreen() {
         $('#fullscreenBtn').addEventListener('click', () => {
-          if (!document.fullscreenElement) document.documentElement.requestFullscreen().catch(() => {});
-          else document.exitFullscreen();
+          if (!document.fullscreenElement) {
+            document.documentElement.requestFullscreen().catch(() => {});
+          } else {
+            document.exitFullscreen();
+          }
         });
       }
 
@@ -3644,73 +3084,84 @@ for (let i = 0; i < 30; i++) {
           currentTestIndex = parseInt(e.target.value);
           loadTest();
         });
+		$('#noteToggleBtn').addEventListener('click', showNote);
         $('#playPauseBtn').addEventListener('click', togglePlayPause);
-        $('#submitBtn').addEventListener('click', () => {
-          const test = getCurrentTest();
-          const answered = test.questions.filter((_, i) => userAnswers[i] !== null && userAnswers[i] !== undefined).length;
-          const total = test.questions.length;
-          if (answered < total) {
-            showModal('⚠️', 'Còn câu chưa trả lời', `Bạn mới trả lời ${answered}/${total} câu. Bạn có muốn nộp bài không?`, '✅ Nộp bài', submitQuiz);
-          } else {
-            submitQuiz();
-          }
-        });
+        $('#submitBtn').addEventListener('click', submitQuiz);
         $('#reviewBtn').addEventListener('click', () => {
           revealed = !revealed;
           renderQuestionList();
           $('#reviewBtn').textContent = revealed ? '📋 Ẩn đáp án' : '📋 Xem đáp án';
         });
-        $('#resetBtn').addEventListener('click', () => {
-          showModal('🔄', 'Làm lại bài?', 'Tất cả câu trả lời và đánh dấu sẽ bị xóa. Bạn có chắc muốn làm lại?', '🔄 Làm lại', resetQuiz);
-        });
+        $('#resetBtn').addEventListener('click', resetQuiz);
         $('#scriptToggleBtn').addEventListener('click', showScript);
-        $('#seekSlider').addEventListener('input', () => { if (currentAudio) currentAudio.currentTime = $('#seekSlider').value; });
-        $('#speedSelect').addEventListener('change', () => { if (currentAudio) currentAudio.playbackRate = parseFloat($('#speedSelect').value); });
-        $('#volumeSlider').addEventListener('input', () => { if (currentAudio) currentAudio.volume = parseFloat($('#volumeSlider').value); });
-        $('#rewindBtn').addEventListener('click', () => { if (currentAudio) currentAudio.currentTime = Math.max(0, currentAudio.currentTime - 5); });
-        $('#forwardBtn').addEventListener('click', () => { if (currentAudio) currentAudio.currentTime = Math.min(currentAudio.duration || 0, currentAudio.currentTime + 5); });
+        $('#seekSlider').addEventListener('input', () => {
+          if (currentAudio) currentAudio.currentTime = $('#seekSlider').value;
+        });
+        $('#speedSelect').addEventListener('change', () => {
+          if (currentAudio) currentAudio.playbackRate = parseFloat($('#speedSelect').value);
+        });
+        $('#volumeSlider').addEventListener('input', () => {
+          if (currentAudio) currentAudio.volume = parseFloat($('#volumeSlider').value);
+        });
+        $('#rewindBtn').addEventListener('click', () => {
+          if (currentAudio) currentAudio.currentTime = Math.max(0, currentAudio.currentTime - 5);
+        });
+        $('#forwardBtn').addEventListener('click', () => {
+          if (currentAudio) currentAudio.currentTime = Math.min(currentAudio.duration || 0, currentAudio.currentTime + 5);
+        });
         $('#loopBtn').addEventListener('click', () => {
           if (!currentAudio) return;
           if (!loopActive) {
-            loopStart = currentAudio.currentTime; loopEnd = null; loopActive = true;
+            loopStart = currentAudio.currentTime;
+            loopEnd = null;
+            loopActive = true;
             $('#loopBtn').style.background = 'var(--primary-light)';
-            showToast('🔁 Đã đặt điểm bắt đầu lặp', 'default', 1500);
           } else if (loopEnd === null) {
             loopEnd = currentAudio.currentTime;
-            if (loopEnd < loopStart) { const tmp = loopStart; loopStart = loopEnd; loopEnd = tmp; }
+            if (loopEnd < loopStart) {
+              const tmp = loopStart;
+              loopStart = loopEnd;
+              loopEnd = tmp;
+            }
             $('#loopBtn').style.background = 'var(--success-light)';
-            showToast('🔁 Đang lặp đoạn đã chọn', 'success', 1500);
           } else {
-            loopStart = null; loopEnd = null; loopActive = false;
+            loopStart = null;
+            loopEnd = null;
+            loopActive = false;
             $('#loopBtn').style.background = '';
-            showToast('🔁 Đã tắt lặp', 'default', 1000);
           }
         });
-
-        // Filter events
-        $('#filterAll').addEventListener('click', () => { currentFilter = 'all'; renderQuestionList(); });
-        $('#filterUnanswered').addEventListener('click', () => { currentFilter = 'unanswered'; renderQuestionList(); });
-        $('#filterBookmarked').addEventListener('click', () => { currentFilter = 'bookmarked'; renderQuestionList(); });
-
-        // History panel
-        $('#historyBtn').addEventListener('click', () => {
-          renderHistory();
-          $('#historyPanel').classList.toggle('open');
-        });
-        $('#historyClose').addEventListener('click', () => { $('#historyPanel').classList.remove('open'); });
-        $('#clearAllHistory').addEventListener('click', clearAllHistory);
-
         // Keyboard shortcuts
         document.addEventListener('keydown', (e) => {
           if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT' || e.target.tagName === 'TEXTAREA') return;
           switch (e.key.toLowerCase()) {
-            case ' ': e.preventDefault(); togglePlayPause(); break;
-            case 'arrowleft': e.preventDefault(); if (currentAudio) currentAudio.currentTime = Math.max(0, currentAudio.currentTime - 5); break;
-            case 'arrowright': e.preventDefault(); if (currentAudio) currentAudio.currentTime = Math.min(currentAudio.duration || 0, currentAudio.currentTime + 5); break;
-            case 's': if (e.ctrlKey || e.metaKey) break; e.preventDefault(); showScript(); break;
-            case 'r': if (e.ctrlKey || e.metaKey) break; e.preventDefault();
-              showModal('🔄', 'Làm lại bài?', 'Tất cả câu trả lời và đánh dấu sẽ bị xóa.', '🔄 Làm lại', resetQuiz); break;
-            case 'h': e.preventDefault(); renderHistory(); $('#historyPanel').classList.toggle('open'); break;
+            case ' ':
+              e.preventDefault();
+              togglePlayPause();
+              break;
+            case 'arrowleft':
+              e.preventDefault();
+              if (currentAudio) currentAudio.currentTime = Math.max(0, currentAudio.currentTime - 5);
+              break;
+            case 'arrowright':
+              e.preventDefault();
+              if (currentAudio) currentAudio.currentTime = Math.min(currentAudio.duration || 0, currentAudio.currentTime + 5);
+              break;
+            case 's':
+              if (e.ctrlKey || e.metaKey) break;
+              e.preventDefault();
+              showScript();
+              break;
+			case 'n':
+			  if (e.ctrlKey || e.metaKey) break;
+			  e.preventDefault();
+			  showNote();
+			  break;
+            case 'r':
+              if (e.ctrlKey || e.metaKey) break;
+              e.preventDefault();
+              resetQuiz();
+              break;
           }
         });
       }
@@ -3731,11 +3182,10 @@ for (let i = 0; i < 30; i++) {
         startTimer();
         if (revealed) {
           $('#submitBtn').style.display = 'none';
-          $('#reviewBtn').style.display = 'inline-flex';
+          $('#reviewBtn').style.display = 'inline-block';
           renderQuestionList();
         }
         updateTimerDisplay();
-        renderHistory();
       }
 
       init();
